@@ -16,9 +16,12 @@
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.blog-post{display:flex;flex-direction:column;border-top:2px solid #a3b493;padding:23px 0 0}.blog-meta{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:#71815f}.blog-meta span:last-child{font-size:9px;border:1px solid #d1dac7;padding:2px 8px;border-radius:20px}.blog-post h3{font-size:24px;font-weight:600;line-height:1.3;letter-spacing:-.7px;margin:25px 0 15px}.blog-post p{font-size:13px;line-height:1.85;color:var(--muted);margin-bottom:24px}.blog-post .text-link{align-self:start;margin-top:auto}.blog-note{font-size:11px;color:var(--muted);margin-top:30px}nav{gap:24px}@media(max-width:900px){nav{gap:13px}.blog-grid{gap:20px}.blog-post h3{font-size:21px}}@media(max-width:680px){.blog-grid{grid-template-columns:1fr;gap:34px}.blog-post h3{font-size:24px;margin-top:19px}nav{gap:18px}}
 .published-post h3 a:hover{color:#668052}.published-post .blog-meta span:last-child{border:0;padding:0;font-size:10px}
 .journal-nav{display:inline-flex;align-items:center;gap:10px;border:1px solid #9cab8a;background:#e4edda;padding:9px 14px;border-radius:7px;color:#294a38;font-weight:700}.journal-nav:hover{background:#d9e6c8;color:#294a38}.journal-hero{background:#e4edda;border-color:#a9bb98;color:#294a38}.journal-hero:hover{background:#d9e6c8;color:#294a38}.hero .actions{gap:10px}.hero .actions .btn{padding:12px 17px}nav{gap:18px}@media(max-width:900px){nav{gap:10px}.journal-nav{padding:8px 10px}}@media(max-width:680px){nav{gap:18px}.journal-nav{justify-content:center;padding:12px}.hero .actions .btn{flex:1 1 auto}.footer-inner .text-link{font-size:11px}}
+
+/* A short curtain between the portfolio and the personal story. */
+.story-curtain{position:fixed;inset:0;z-index:200;background:#294a38;color:#f6f4ee;display:grid;place-items:center;pointer-events:none;visibility:hidden;clip-path:inset(100% 0 0 0)}.story-curtain span{font-family:'Manrope',sans-serif;font-size:clamp(28px,5vw,54px);font-weight:500;letter-spacing:-1.5px;opacity:0;transform:translateY(12px)}.story-departure .story-curtain{visibility:visible;pointer-events:auto;animation:story-cover 420ms cubic-bezier(.76,0,.24,1) forwards}.story-departure .story-curtain span{animation:story-title 230ms ease 150ms forwards}.story-arrival .story-curtain{visibility:visible;clip-path:inset(0);animation:story-uncover 480ms cubic-bezier(.76,0,.24,1) 70ms both}.story-arrival .story-curtain span{opacity:1;transform:none;animation:story-title-out 180ms ease both}.story-arrival main{animation:story-content 650ms cubic-bezier(.2,.7,.2,1) 140ms both}@keyframes story-cover{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}@keyframes story-uncover{from{clip-path:inset(0)}to{clip-path:inset(0 0 100% 0)}}@keyframes story-title{to{opacity:1;transform:translateY(0)}}@keyframes story-title-out{to{opacity:0;transform:translateY(-8px)}}@keyframes story-content{from{opacity:.35;transform:translateY(12px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.story-curtain{display:none!important}.story-arrival main{animation:none!important}}
 </style>
 </head>
-<body id="top">
+<body id="top"><div class="story-curtain" aria-hidden="true"><span>My story.</span></div>
 <a href="#main" style="position:fixed;top:-100px;left:20px;z-index:100;background:#fff;padding:10px" onfocus="this.style.top='10px'" onblur="this.style.top='-100px'">Skip to content</a>
 <header><div class="wrap nav"><a class="brand" href="#top" aria-label="DevFoundy home">DevFoundy<span>.</span></a><button class="menu" aria-expanded="false" aria-controls="navigation">Menu ☰</button><nav id="navigation" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#shop">Shop & learn</a><a class="journal-nav" href="#blog">Journal <span aria-hidden="true">↗</span></a><a class="nav-cta" href="coming-soon.html?section=contact">Let’s talk <span aria-hidden="true">↗</span></a></nav></div></header>
 <main id="main"><div class="wrap">
@@ -40,4 +43,24 @@
 </div></div></section></div></main>
 <footer><div class="wrap footer-inner"><a class="brand" href="#top">DevFoundy<span>.</span></a><p>© <span id="year">2026</span> DevFoundy. Created by Kenta.</p><a class="text-link" href="#blog">Read the journal ↗</a><a href="#top">Back to top ↑</a></div></footer>
 <script>const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.focus()}});document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+<script>
+(()=>{
+ const link=document.querySelector('a[href="my-story.html"]');
+ const curtain=document.querySelector('.story-curtain');
+ let leaving=false;
+ if(!link||!curtain)return;
+ const reset=()=>{leaving=false;document.documentElement.classList.remove('story-departure');document.querySelector('main')?.removeAttribute('aria-busy');};
+ window.addEventListener('pageshow',reset);
+ link.addEventListener('click',event=>{
+  if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  event.preventDefault();if(leaving)return;leaving=true;
+  try{sessionStorage.setItem('devfoundy-story-entry',String(Date.now()));}catch{}
+  document.querySelector('main')?.setAttribute('aria-busy','true');
+  let navigated=false;
+  const go=()=>{if(navigated)return;navigated=true;window.location.assign(link.href);};
+  curtain.addEventListener('animationend',event=>{if(event.animationName==='story-cover')go();});
+  document.documentElement.classList.add('story-departure');
+  window.setTimeout(go,550);
+ });
+})();
+</script></body></html>
