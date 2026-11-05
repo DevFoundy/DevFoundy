@@ -91,4 +91,58 @@
     resetCards();
     accordions.forEach(finish => finish());
   });
+
+  const showcase = document.querySelector('[data-project-showcase]');
+  if (showcase) {
+    const primaryCards = [...showcase.querySelectorAll('.showcase-set:not([aria-hidden]) .showcase-card')];
+    showcase.querySelectorAll('.showcase-card img').forEach(image => {
+      const markMissing = () => image.closest('.showcase-card')?.classList.add('image-missing');
+      image.addEventListener('error', markMissing);
+      if (image.complete && image.naturalWidth === 0) markMissing();
+    });
+
+    const reveal = card => {
+      primaryCards.forEach(item => item.classList.toggle('is-revealed', item === card));
+      showcase.classList.toggle('is-interacting', Boolean(card));
+    };
+    primaryCards.forEach(card => {
+      card.addEventListener('pointerup', event => {
+        if (event.pointerType === 'mouse' || event.target.closest('a')) return;
+        reveal(card.classList.contains('is-revealed') ? null : card);
+      });
+      card.addEventListener('keydown', event => {
+        if ((event.key === 'Enter' || event.key === ' ') && event.target === card) {
+          event.preventDefault();
+          reveal(card);
+          card.querySelector('.showcase-more')?.focus();
+        }
+      });
+    });
+    document.addEventListener('pointerup', event => {
+      if (!showcase.contains(event.target)) reveal(null);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        const activeCard = showcase.querySelector('.showcase-card.is-revealed');
+        reveal(null);
+        activeCard?.focus();
+      }
+    });
+  }
+
+  const revealProjectFromHash = () => {
+    document.querySelectorAll('.project-card.is-showcase-target').forEach(card => card.classList.remove('is-showcase-target'));
+    if (!location.hash) return;
+    const id = decodeURIComponent(location.hash.slice(1));
+    const target = document.getElementById(id);
+    if (!target?.classList.contains('project-card')) return;
+    target.classList.add('is-showcase-target');
+    target.setAttribute('tabindex', '-1');
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'center' });
+      target.focus({ preventScroll: true });
+    });
+  };
+  revealProjectFromHash();
+  window.addEventListener('hashchange', revealProjectFromHash);
 })();
