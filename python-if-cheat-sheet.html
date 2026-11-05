@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>(()=>{let theme='light';try{const saved=localStorage.getItem('devfoundy-theme');if(saved==='light'||saved==='dark')theme=saved;else if(matchMedia('(prefers-color-scheme: dark)').matches)theme='dark';}catch{if(matchMedia('(prefers-color-scheme: dark)').matches)theme='dark';}document.documentElement.dataset.theme=theme;})();</script><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f4ee"><title>Python If Statement Cheat Sheet — DevFoundy</title><meta name="description" content="Python if, elif and else explained with operators, common mistakes, and 12 practical examples. Free beginner cheat sheet from DevFoundy."><link rel="canonical" href="https://devfoundy.github.io/DevFoundy/python-if-cheat-sheet.html"><meta property="og:title" content="Python If Statement Cheat Sheet — DevFoundy"><meta property="og:description" content="The basics, the common mistakes, and 12 practical Python examples."><meta property="og:type" content="website"><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:25px}body{margin:0;background:var(--tone-f6f4ee);color:var(--tone-202d27);font:16px/1.75 'DM Sans',sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,pre:focus-visible{outline:3px solid var(--tone-719a43);outline-offset:4px}.nav{max-width:1160px;margin:auto;display:flex;align-items:center;gap:22px;padding:24px}.brand{font:800 26px Manrope,sans-serif;letter-spacing:-1.3px;text-decoration:none;margin-right:auto}.brand span{color:var(--tone-779855)}.back{font-size:12px}body>header{border-bottom:1px solid var(--tone-dcded4)}main{max-width:1100px;margin:auto;padding:60px 24px 80px}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--tone-71835e)}h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.25}h1{font-size:clamp(38px,6vw,66px);letter-spacing:-2px;margin:20px 0}h2{font-size:30px;letter-spacing:-1px;margin:0 0 24px}h3{font-size:21px;margin:0 0 14px}.intro{max-width:710px;font-size:19px;color:var(--tone-657068)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.btn{border:1px solid var(--tone-294a38);border-radius:7px;background:var(--tone-294a38);color:var(--tone-fffefa);padding:11px 18px;font-size:13px;text-decoration:none}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:50px;margin-top:55px}.layout>div{min-width:0}aside{align-self:start;position:sticky;top:24px;border-top:1px solid var(--tone-dcded4);padding-top:16px}aside a{display:block;font-size:13px;padding:6px 0;text-decoration:none}section{margin-bottom:48px}article.example{border:1px solid var(--tone-dcded4);border-radius:14px;background:var(--tone-fffefa);padding:24px;margin-bottom:20px;min-width:0}p{margin:0 0 18px}.note{border-left:3px solid var(--tone-779855);padding:12px 18px;background:var(--tone-e9eddf)}.code-wrap{position:relative;margin:18px 0 0}pre{overflow:auto;max-width:100%;margin:0;padding:52px 18px 20px;background:var(--tone-e9eddf);border:1px solid var(--tone-dcded4);border-radius:9px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:4}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em}pre code{font-size:inherit}.copy{position:absolute;right:10px;top:10px;background:var(--tone-fffefa);color:var(--tone-202d27);border:1px solid var(--tone-dcded4);padding:4px 10px;border-radius:5px;font-size:11px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;border-bottom:1px solid var(--tone-dcded4);padding:12px}th{background:var(--tone-e9eddf)}ul{padding-left:22px}li{margin:10px 0}footer{border-top:1px solid var(--tone-dcded4);padding:24px;text-align:center;font-size:12px}.live-status{font-size:13px;color:var(--tone-657068);min-height:1.75em}@media(max-width:750px){.layout{grid-template-columns:1fr;gap:28px;margin-top:32px}aside{position:static;display:flex;flex-wrap:wrap;gap:8px 20px}aside .eyebrow{width:100%}.nav{flex-wrap:wrap;gap:14px}.brand{font-size:23px}main{padding-top:35px}article.example{padding:18px}h2{font-size:27px}.intro{font-size:17px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{aside,.copy,.actions,.theme-toggle,.back{display:none!important}.layout{display:block}main{max-width:none;padding:20px}body{background:white;color:black}pre{white-space:pre-wrap;overflow:visible;background:#f4f4f4;color:black;font-size:10px;padding:14px}article.example{break-inside:avoid;background:white;color:black}h1{font-size:32px}section{margin-bottom:24px}}</style><link rel="stylesheet" href="assets/theme.css?v=1"><script src="assets/theme.js?v=1" defer></script></head><body><header><nav class="nav" aria-label="Resource navigation"><a class="brand" href="index.html">DevFoundy<span>.</span></a><a class="back" href="index.html#free-shop">← Free shop</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button></nav></header><main><div class="eyebrow">Free resource / Python basics</div><h1>Python if statement<br>cheat sheet.</h1><p class="intro">Make decisions in your code. Learn the basic patterns, check the operators, and work through 12 examples you can copy and adapt.</p><div class="actions"><a class="btn" href="#examples">Jump to the 12 examples ↓</a><a class="btn" href="resources/python-if-examples.py" download>Download Python examples</a><button class="btn" id="print" type="button" hidden>Print / save as PDF</button></div><p class="live-status" id="copy-status" role="status" aria-live="polite"></p><div class="layout"><aside aria-label="On this page"><div class="eyebrow">On this page</div><a href="#basics">01 / Basic syntax</a><a href="#operators">02 / Operators</a><a href="#patterns">03 / Useful patterns</a><a href="#examples">04 / 12 examples</a><a href="#mistakes">05 / Common mistakes</a></aside><div><section id="basics"><h2>01 / Start with the structure</h2><article class="example"><h3>The basic pattern</h3><p>Python checks from top to bottom and runs the first matching branch. elif and else are optional. Use a colon and indent each body by four spaces.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>score = 75
+if score &gt;= 80:
+    print(&quot;High score&quot;)
+elif score &gt;= 50:
+    print(&quot;Pass&quot;)
+else:
+    print(&quot;Try again&quot;)</code></pre></div></article><p class="note">A condition evaluates as true or false. After one branch runs, Python skips the rest of that chain and continues after the indented block. An else has no condition.</p></section><section id="operators"><h2>02 / Operators at a glance</h2><div class="table-wrap"><table><caption>Comparison and logical operators</caption><thead><tr><th scope="col">Operator</th><th scope="col">Meaning</th><th scope="col">Example</th></tr></thead><tbody><tr><td><code>==</code></td><td>Equal to</td><td><code>x == 5</code></td></tr><tr><td><code>!=</code></td><td>Not equal to</td><td><code>x != 5</code></td></tr><tr><td><code>&gt;</code></td><td>Greater than</td><td><code>x &gt; 5</code></td></tr><tr><td><code>&lt;</code></td><td>Less than</td><td><code>x &lt; 5</code></td></tr><tr><td><code>&gt;=</code></td><td>Greater than or equal to</td><td><code>x &gt;= 5</code></td></tr><tr><td><code>&lt;=</code></td><td>Less than or equal to</td><td><code>x &lt;= 5</code></td></tr><tr><td><code>and</code></td><td>Both conditions must be true</td><td><code>age &gt;= 13 and age &lt;= 19</code></td></tr><tr><td><code>or</code></td><td>At least one condition must be true</td><td><code>day == &quot;Sat&quot; or day == &quot;Sun&quot;</code></td></tr><tr><td><code>not</code></td><td>Reverse the condition</td><td><code>not is_ready</code></td></tr><tr><td><code>in / not in</code></td><td>Membership / non-membership</td><td><code>choice in (&quot;yes&quot;, &quot;y&quot;)</code></td></tr></tbody></table></div><p>Python also supports chained comparisons: <code>0 &lt;= grade &lt;= 100</code> means <code>grade &gt;= 0 and grade &lt;= 100</code>. Use parentheses to make mixed <code>and</code>/<code>or</code> conditions clear; <code>not</code> binds before <code>and</code>, then <code>or</code>.</p></section><section id="patterns"><h2>03 / Useful patterns</h2><article class="example"><h3>Separate ifs or one chain?</h3><p>Separate if statements can both run. An if/elif chain chooses at most one branch.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>score = 95
+if score &gt;= 50:
+    print(&quot;Passed&quot;)
+if score &gt;= 90:
+    print(&quot;Excellent&quot;)
+# Both messages print.</code></pre></div></article><article class="example"><h3>Nested conditions</h3><p>Put an if inside another if when the second decision depends on the first.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>has_ticket = True
+age = 16
+if has_ticket:
+    if age &gt;= 12:
+        print(&quot;Enter the show&quot;)
+    else:
+        print(&quot;An adult must accompany you&quot;)
+else:
+    print(&quot;You need a ticket&quot;)</code></pre></div></article><article class="example"><h3>Boolean values and membership</h3><p>Use Boolean variables directly. in checks membership; not reverses a condition. Empty strings, zero, None, and empty collections are falsy.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>is_ready = True
+choice = &quot;yes&quot;
+if is_ready and choice in (&quot;yes&quot;, &quot;y&quot;):
+    print(&quot;Start&quot;)
+if not is_ready:
+    print(&quot;Wait&quot;)</code></pre></div></article><article class="example"><h3>Short conditional expression</h3><p>Useful for a simple choice between two values. Keep longer decisions in normal blocks.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>age = 16
+label = &quot;adult&quot; if age &gt;= 18 else &quot;child&quot;
+print(label)</code></pre></div></article><article class="example"><h3>Handle non-numeric input</h3><p>input() returns a string. int() accepts whole numbers; float() also accepts decimals. Bad numeric text raises ValueError before an if can check its range. Use try/except when you need to handle it.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>try:
+    age = int(input(&quot;Enter your age: &quot;))
+except ValueError:
+    print(&quot;Please enter a whole number.&quot;)
+else:
+    if age &lt; 0:
+        print(&quot;Age cannot be negative.&quot;)
+    else:
+        print(&quot;Valid age.&quot;)</code></pre></div></article></section><section id="examples"><h2>04 / Twelve practical examples</h2><p>Run each example separately in Python 3. Numeric examples assume valid numeric text unless they explicitly use try/except. They check ranges after conversion.</p><article class="example" id="example-1"><div class="eyebrow">Example 01</div><h3>Positive or not</h3><p>Zero is not positive. Use &gt; rather than &gt;=.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>number = int(input(&quot;Enter a number: &quot;))
+if number &gt; 0:
+    print(&quot;The number is positive.&quot;)
+else:
+    print(&quot;The number is not positive.&quot;)</code></pre></div></article><article class="example" id="example-2"><div class="eyebrow">Example 02</div><h3>Pass or fail</h3><p>Validate the range first, then check the pass mark. These examples use a pass mark of 50.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>grade = int(input(&quot;Enter your grade: &quot;))
+if grade &lt; 0 or grade &gt; 100:
+    print(&quot;Invalid grade. Enter 0 to 100.&quot;)
+elif grade &gt;= 50:
+    print(&quot;You passed the class.&quot;)
+else:
+    print(&quot;You failed the class.&quot;)</code></pre></div></article><article class="example" id="example-3"><div class="eyebrow">Example 03</div><h3>Even or odd</h3><p>% gives the remainder. An integer is even when dividing by 2 leaves no remainder.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>number = int(input(&quot;Enter a number: &quot;))
+if number % 2 == 0:
+    print(&quot;The number is even.&quot;)
+else:
+    print(&quot;The number is odd.&quot;)</code></pre></div></article><article class="example" id="example-4"><div class="eyebrow">Example 04</div><h3>Adult or child</h3><p>For this exercise, adult means age 18 or above. Reject negative ages first.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>age = int(input(&quot;Enter your age: &quot;))
+if age &lt; 0:
+    print(&quot;Invalid age.&quot;)
+elif age &gt;= 18:
+    print(&quot;You are an adult.&quot;)
+else:
+    print(&quot;You are a child.&quot;)</code></pre></div></article><article class="example" id="example-5"><div class="eyebrow">Example 05</div><h3>Larger of two numbers</h3><p>After checking both greater-than cases, the only remaining possibility is equality.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>num1 = int(input(&quot;Enter the first number: &quot;))
+num2 = int(input(&quot;Enter the second number: &quot;))
+if num1 &gt; num2:
+    print(&quot;The larger number is&quot;, num1)
+elif num2 &gt; num1:
+    print(&quot;The larger number is&quot;, num2)
+else:
+    print(&quot;The numbers are equal.&quot;)</code></pre></div></article><article class="example" id="example-6"><div class="eyebrow">Example 06</div><h3>Numerical grade to letter grade</h3><p>Check from highest to lowest. Earlier branches have already ruled out higher grades. This is a practice scale, not official Cambridge grade boundaries.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>grade = int(input(&quot;Enter your grade: &quot;))
+if not 0 &lt;= grade &lt;= 100:
+    print(&quot;Invalid grade. Enter 0 to 100.&quot;)
+elif grade &gt;= 90:
+    print(&quot;You got an A.&quot;)
+elif grade &gt;= 80:
+    print(&quot;You got a B.&quot;)
+elif grade &gt;= 70:
+    print(&quot;You got a C.&quot;)
+elif grade &gt;= 60:
+    print(&quot;You got a D.&quot;)
+else:
+    print(&quot;You got an F.&quot;)</code></pre></div></article><article class="example" id="example-7"><div class="eyebrow">Example 07</div><h3>Hot, warm, or cold</h3><p>With these chosen thresholds, 30°C is warm and 20°C is cold. float() also accepts decimal temperatures.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>temperature = float(input(&quot;Temperature in Celsius: &quot;))
+if temperature &gt; 30:
+    print(&quot;It is hot.&quot;)
+elif temperature &gt; 20:
+    print(&quot;It is warm.&quot;)
+else:
+    print(&quot;It is cold.&quot;)</code></pre></div></article><article class="example" id="example-8"><div class="eyebrow">Example 08</div><h3>Compare two strings</h3><p>This keeps the username/password comparison as a string exercise. Equality is case-sensitive. It does not authenticate a user; use made-up values, not a real password.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>username = input(&quot;Enter a practice username: &quot;)
+password = input(&quot;Enter a practice password: &quot;)
+if username == password:
+    print(&quot;The strings match.&quot;)
+else:
+    print(&quot;The strings do not match.&quot;)</code></pre></div></article><article class="example" id="example-9"><div class="eyebrow">Example 09</div><h3>Leap year</h3><p>For Gregorian calendar years: divisible by 400, or divisible by 4 but not by 100. 2000 is a leap year; 1900 is not.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>year = int(input(&quot;Enter a year: &quot;))
+if year &lt;= 0:
+    print(&quot;Enter a positive year.&quot;)
+elif year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+    print(&quot;This is a leap year.&quot;)
+else:
+    print(&quot;This is not a leap year.&quot;)</code></pre></div></article><article class="example" id="example-10"><div class="eyebrow">Example 10</div><h3>Simple calculator</h3><p>Check the operator and guard both division operations against zero. / divides; // performs floor division (rounds down, so -5 // 2 is -3).</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>number1 = float(input(&quot;First number: &quot;))
+number2 = float(input(&quot;Second number: &quot;))
+operator = input(&quot;Operator (+, -, *, /, //): &quot;).strip()
+if operator not in (&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;, &quot;//&quot;):
+    print(&quot;Invalid operator.&quot;)
+elif operator in (&quot;/&quot;, &quot;//&quot;) and number2 == 0:
+    print(&quot;Cannot divide by zero.&quot;)
+elif operator == &quot;+&quot;:
+    print(number1 + number2)
+elif operator == &quot;-&quot;:
+    print(number1 - number2)
+elif operator == &quot;*&quot;:
+    print(number1 * number2)
+elif operator == &quot;/&quot;:
+    print(number1 / number2)
+else:
+    print(number1 // number2)</code></pre></div></article><article class="example" id="example-11"><div class="eyebrow">Example 11</div><h3>Apply a 10% discount</h3><p>Over 1000 means strictly greater than 1000. An amount of exactly 1000 gets no discount.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>amount = float(input(&quot;Purchase amount: &quot;))
+if amount &lt; 0:
+    print(&quot;Invalid amount.&quot;)
+elif amount &gt; 1000:
+    print(&quot;Total:&quot;, round(amount * 0.9, 2))
+else:
+    print(&quot;No discount. Total:&quot;, amount)</code></pre></div></article><article class="example" id="example-12"><div class="eyebrow">Example 12</div><h3>Largest of three numbers</h3><p>Using &gt;= handles tied largest values too: 5, 5, 2 correctly gives 5. Strict &gt; checks alone miss this case.</p><div class="code-wrap"><button class="copy" type="button" hidden>Copy code</button><pre tabindex="0" aria-label="Python code"><code>n1 = int(input(&quot;First number: &quot;))
+n2 = int(input(&quot;Second number: &quot;))
+n3 = int(input(&quot;Third number: &quot;))
+if n1 == n2 == n3:
+    print(&quot;All numbers are equal:&quot;, n1)
+elif n1 &gt;= n2 and n1 &gt;= n3:
+    print(&quot;The largest number is&quot;, n1)
+elif n2 &gt;= n1 and n2 &gt;= n3:
+    print(&quot;The largest number is&quot;, n2)
+else:
+    print(&quot;The largest number is&quot;, n3)</code></pre></div></article></section><section id="mistakes"><h2>05 / Common mistakes to catch</h2><ul><li><strong>Using = instead of ==.</strong> <code>=</code> assigns a value; <code>==</code> compares two values.</li><li><strong>Missing the colon or indentation.</strong> End each if, elif, and else header with <code>:</code>. Align elif and else with their if.</li><li><strong>Writing “else if”.</strong> Python uses <code>elif</code>.</li><li><strong>Writing <code>x == 1 or 2</code>.</strong> Use <code>x == 1 or x == 2</code>, or <code>x in (1, 2)</code>. The value 2 by itself is truthy.</li><li><strong>Checking a broad condition first.</strong> If you check <code>grade &gt;= 50</code> before <code>grade &gt;= 90</code> in the same chain, a score of 95 matches the first branch.</li><li><strong>Forgetting boundaries and ties.</strong> Try 0, 18, 20, 30, 50, 100, and equal numbers where relevant. Test just below, exactly at, and just above a threshold.</li><li><strong>Comparing input as text.</strong> <code>"10" &lt; "2"</code> is true because strings compare lexicographically. Convert numeric input first.</li><li><strong>Using is for equality.</strong> Use <code>==</code> for equal values. <code>is</code> checks object identity; <code>value is None</code> is a standard use.</li></ul><p>Keep exploring with the <a href="https://docs.python.org/3/tutorial/controlflow.html#if-statements" target="_blank" rel="noopener noreferrer">official Python tutorial ↗</a>.</p><a href="index.html#free-shop">← More free resources</a></section></div></div></main><footer>DevFoundy · Created by Kenta</footer><script>
+document.getElementById('print').hidden = false;
+document.getElementById('print').addEventListener('click', () => window.print());
+document.querySelectorAll('.copy').forEach(button => {
+ button.hidden = false;
+ button.addEventListener('click', async () => {
+  const status = document.getElementById('copy-status');
+  try {
+   await navigator.clipboard.writeText(button.parentElement.querySelector('code').textContent);
+   button.textContent = 'Copied!'; status.textContent = 'Python code copied.';
+   setTimeout(() => { button.textContent = 'Copy code'; }, 1800);
+  } catch {
+   button.textContent = 'Select code';
+   const range = document.createRange(); range.selectNodeContents(button.parentElement.querySelector('code'));
+   const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+   status.textContent = 'Code selected. Press Ctrl+C or Command+C to copy.';
+  }
+ });
+});
+</script></body></html>
