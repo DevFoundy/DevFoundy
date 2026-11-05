@@ -1,0 +1,217 @@
+/* Shared palette: light retains the original cream and sage identity. */
+:root {
+  --tone-f6f4ee: #f6f4ee;
+  --tone-202d27: #202d27;
+  --tone-657068: #657068;
+  --tone-dcded4: #dcded4;
+  --tone-294a38: #294a38;
+  --tone-d9edac: #d9edac;
+  --tone-fffefa: #fffefa;
+  --tone-719a43: #719a43;
+  --tone-f6f4eef2: #f6f4eef2;
+  --tone-779855: #779855;
+  --tone-3d604b: #3d604b;
+  --tone-b8c1b4: #b8c1b4;
+  --tone-e9ecdf: #e9ecdf;
+  --tone-d7ddcd: #d7ddcd;
+  --tone-72944d: #72944d;
+  --tone-e9eddf: #e9eddf;
+  --tone-668052: #668052;
+  --tone-91a577: #91a577;
+  --tone-cdd5c5: #cdd5c5;
+  --tone-e2e9d8: #e2e9d8;
+  --tone-e7e9e1: #e7e9e1;
+  --tone-7b8771: #7b8771;
+  --tone-e7eddc: #e7eddc;
+  --tone-fffefaec: #fffefaec;
+  --tone-687460: #687460;
+  --tone-e6e2da: #e6e2da;
+  --tone-768365: #768365;
+  --tone-adb99f: #adb99f;
+  --tone-bfc9b6: #bfc9b6;
+  --tone-7d8b71: #7d8b71;
+  --tone-53624f: #53624f;
+  --tone-78915f: #78915f;
+  --tone-ccd3c3: #ccd3c3;
+  --tone-d9dfce: #d9dfce;
+  --tone-cbd4bd: #cbd4bd;
+  --tone-dbe1ce: #dbe1ce;
+  --tone-c3cdb5: #c3cdb5;
+  --tone-70875a: #70875a;
+  --tone-708773: #708773;
+  --tone-718653: #718653;
+  --tone-bac5b1: #bac5b1;
+  --tone-cbd3c1: #cbd3c1;
+  --tone-cfd7c3: #cfd7c3;
+  --tone-748561: #748561;
+  --tone-7c8b6d: #7c8b6d;
+  --tone-a3b493: #a3b493;
+  --tone-71815f: #71815f;
+  --tone-d1dac7: #d1dac7;
+  --tone-9cab8a: #9cab8a;
+  --tone-e4edda: #e4edda;
+  --tone-d9e6c8: #d9e6c8;
+  --tone-a9bb98: #a9bb98;
+  --tone-edf1e5: #edf1e5;
+  --tone-d3dacb: #d3dacb;
+  --tone-64705f: #64705f;
+  --tone-75836a: #75836a;
+  --tone-b9c6ac: #b9c6ac;
+  --tone-759450: #759450;
+  --tone-71835e: #71835e;
+  --tone-718069: #718069;
+  --tone-46554a: #46554a;
+  --tone-24382b: #24382b;
+  --tone-d3dcc8: #d3dcc8;
+  --tone-8ba370: #8ba370;
+  --tone-e6ebdc: #e6ebdc;
+  --tone-a8b59a: #a8b59a;
+  --tone-9fac94: #9fac94;
+  --tone-68785d: #68785d;
+  --tone-b6c0ac: #b6c0ac;
+  color-scheme: light;
+  --theme-shadow: 0 10px 32px -24px #294a3850;
+}
+:root[data-theme="dark"] {
+  --tone-f6f4ee: #111c18;
+  --tone-202d27: #ecf0e8;
+  --tone-657068: #afbbb0;
+  --tone-dcded4: #34453a;
+  --tone-294a38: #b8d68e;
+  --tone-d9edac: #d9edac;
+  --tone-fffefa: #1a2921;
+  --tone-719a43: #b8d68e;
+  --tone-f6f4eef2: #111c18f2;
+  --tone-779855: #b8d68e;
+  --tone-3d604b: #cee6a9;
+  --tone-b8c1b4: #52694f;
+  --tone-e9ecdf: #25382a;
+  --tone-d7ddcd: #3b4c3f;
+  --tone-72944d: #b8d68e;
+  --tone-e9eddf: #203226;
+  --tone-668052: #b8d68e;
+  --tone-91a577: #afca8f;
+  --tone-cdd5c5: #3d5041;
+  --tone-e2e9d8: #283c2c;
+  --tone-e7e9e1: #34453a;
+  --tone-7b8771: #afbea0;
+  --tone-e7eddc: #2b4030;
+  --tone-fffefaec: #1a2921ec;
+  --tone-687460: #afbea0;
+  --tone-e6e2da: #2c322a;
+  --tone-768365: #b4c69e;
+  --tone-adb99f: #607b51;
+  --tone-bfc9b6: #44573f;
+  --tone-7d8b71: #afbea0;
+  --tone-53624f: #bdc9b5;
+  --tone-78915f: #a8c387;
+  --tone-ccd3c3: #3d5041;
+  --tone-d9dfce: #344b39;
+  --tone-cbd4bd: #3d5041;
+  --tone-dbe1ce: #34453a;
+  --tone-c3cdb5: #445b3c;
+  --tone-70875a: #b8d68e;
+  --tone-708773: #52694f;
+  --tone-718653: #c4dda6;
+  --tone-bac5b1: #445b3c;
+  --tone-cbd3c1: #344b39;
+  --tone-cfd7c3: #3d5041;
+  --tone-748561: #afbea0;
+  --tone-7c8b6d: #afbea0;
+  --tone-a3b493: #607b51;
+  --tone-71815f: #b2c49d;
+  --tone-d1dac7: #3d5041;
+  --tone-9cab8a: #4c6441;
+  --tone-e4edda: #2c402a;
+  --tone-d9e6c8: #354e31;
+  --tone-a9bb98: #4c6441;
+  --tone-edf1e5: #223728;
+  --tone-d3dacb: #3d5041;
+  --tone-64705f: #b3c1a8;
+  --tone-75836a: #afbea0;
+  --tone-b9c6ac: #445b3c;
+  --tone-759450: #b8d68e;
+  --tone-71835e: #b2c49d;
+  --tone-718069: #afbbb0;
+  --tone-46554a: #c1cdbf;
+  --tone-24382b: #e5efdd;
+  --tone-d3dcc8: #3d5041;
+  --tone-8ba370: #9ab77c;
+  --tone-e6ebdc: #2b4030;
+  --tone-a8b59a: #52694f;
+  --tone-9fac94: #52694f;
+  --tone-68785d: #b2c49d;
+  --tone-b6c0ac: #445b3c;
+  color-scheme: dark;
+  --theme-shadow: 0 16px 34px -22px #0009;
+}
+body { background:var(--tone-f6f4ee); color:var(--tone-202d27); }
+::selection { background:#b8d68e; color:#142219; }
+.theme-toggle {
+  flex:0 0 44px; width:44px; height:44px; padding:11px;
+  display:inline-grid; place-items:center; cursor:pointer;
+  border:1px solid var(--tone-dcded4); border-radius:50%;
+  background:var(--tone-fffefa); color:var(--tone-294a38);
+  box-shadow:0 3px 12px -8px #294a3850;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.theme-toggle[hidden] { display:none; }
+.theme-toggle svg { width:20px; height:20px; grid-area:1/1; }
+.theme-toggle .theme-sun { display:none; }
+[data-theme="dark"] .theme-toggle .theme-moon { display:none; }
+[data-theme="dark"] .theme-toggle .theme-sun { display:block; }
+.theme-toggle:hover { background:var(--tone-e9eddf); border-color:var(--tone-779855); transform:translateY(-2px); }
+.theme-toggle:active { transform:scale(.94); }
+.theme-toggle:focus-visible { outline:3px solid var(--tone-759450); outline-offset:4px; }
+header > .nav > .brand, header > .wrap > .brand { margin-right:auto; }
+header > .nav > .back, header > .wrap > .back { margin-left:auto; }
+header .nav > #navigation { order:1; }
+header .nav > .theme-toggle { order:2; }
+header .nav > .menu { order:3; }
+.menu { color:var(--tone-202d27); cursor:pointer; min-height:44px; }
+.btn, .nav-cta, .mini-button, .story-links a { color:#fffefa; background:#294a38; border-color:#294a38; }
+.btn:hover, .nav-cta:hover, .story-links a:hover { background:#3d604b; color:#fffefa; }
+[data-theme="dark"] .btn, [data-theme="dark"] .nav-cta, [data-theme="dark"] .story-links a {
+  color:#152219; background:#b8d68e; border-color:#b8d68e;
+}
+[data-theme="dark"] .btn:hover, [data-theme="dark"] .nav-cta:hover, [data-theme="dark"] .story-links a:hover {
+  color:#152219; background:#cee6a9; border-color:#cee6a9;
+}
+.btn.light, .btn.secondary, .story-links a:last-child {
+  color:var(--tone-202d27); background:transparent; border:1px solid var(--tone-b8c1b4);
+}
+.btn.light:hover, .btn.secondary:hover, .story-links a:last-child:hover { color:var(--tone-202d27); background:var(--tone-e9eddf); }
+.journal-hero, [data-theme="dark"] .journal-hero { background:var(--tone-e4edda); color:var(--tone-294a38); border-color:var(--tone-a9bb98); }
+.journal-hero:hover, [data-theme="dark"] .journal-hero:hover { background:var(--tone-d9e6c8); color:var(--tone-294a38); }
+.contact-panel { background:#294a38; color:#fffefa; }
+[data-theme="dark"] .contact-panel { background:#203b2a; border:1px solid #45613c; }
+.contact-panel h2 em { color:#d9edac; }
+.story-curtain { background:#294a38; color:#f6f4ee; }
+.mini-browser { color:var(--tone-202d27); }
+a[href="#main"] { background:var(--tone-fffefa)!important; color:var(--tone-202d27); }
+.offer-card, .experience-item, .current-project, .project-card, .concept-card, .interest { box-shadow:var(--theme-shadow); }
+@media(hover:hover) {
+  .text-link:hover, .back:hover { color:var(--tone-294a38); }
+  .offer-card:hover, .project-card:hover, .concept-card:hover { border-color:var(--tone-779855); }
+}
+@media(min-width:1001px) { header .nav { gap:18px; } #navigation { gap:16px; } }
+@media(max-width:1000px) {
+  header .nav { gap:12px; }
+  .nav > .menu { display:block; }
+  .nav > #navigation {
+    display:none; position:absolute; top:100%; left:0; right:0;
+    background:var(--tone-f6f4ee); padding:22px 26px;
+    border-bottom:1px solid var(--tone-dcded4);
+    flex-direction:column; align-items:stretch; gap:18px;
+    box-shadow:0 18px 26px -24px #0008;
+  }
+  .nav > #navigation.open { display:flex; }
+  .nav > .theme-toggle { margin-left:auto; }
+}
+@media(max-width:600px) {
+  body > header > .nav, body > header > .wrap { gap:10px; }
+  body > header .brand { font-size:22px; }
+  body > header .back { font-size:11px; max-width:110px; text-align:right; line-height:1.5; }
+  .theme-toggle { flex-basis:44px; }
+}
+@media(prefers-reduced-motion:reduce) { .theme-toggle { transition:none; } }
