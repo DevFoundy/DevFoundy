@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><script>(()=>{let theme='light';try{const saved=localStorage.getItem('devfoundy-theme');if(saved==='light'||saved==='dark')theme=saved;else if(matchMedia('(prefers-color-scheme: dark)').matches)theme='dark';}catch{if(matchMedia('(prefers-color-scheme: dark)').matches)theme='dark';}document.documentElement.dataset.theme=theme;})();</script><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f4ee"><meta name="description" content="My perspective on AI-assisted development, why understanding code still matters, and what it means to take responsibility for the software we build."><meta property="og:title" content="AI Is Changing Programming, But What Does It Really Mean to Be a Developer?"><meta property="og:description" content="My perspective on AI-assisted development, why understanding code still matters, and what it means to take responsibility for the software we build."><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-06"><link rel="canonical" href="https://devfoundy.github.io/DevFoundy/blog/ai-is-changing-programming-what-does-it-mean-to-be-a-developer.html"><title>AI Is Changing Programming, But What Does It Really Mean to Be a Developer? — The DevFoundy Journal</title><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--tone-f6f4ee);color:var(--tone-202d27);font-family:'DM Sans',sans-serif;line-height:1.85}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--tone-759450);outline-offset:5px}header{border-bottom:1px solid var(--tone-dcded4)}.nav{max-width:1120px;margin:auto;padding:24px 30px;display:flex;justify-content:space-between;align-items:center;gap:22px}.brand{font:800 26px 'Manrope',sans-serif;letter-spacing:-1.3px}.brand span{color:var(--tone-779855)}.back{font-size:12px;font-weight:600}main{max-width:820px;padding:65px 30px 90px;margin:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:700;color:var(--tone-71835e)}.article-head{padding-bottom:35px;border-bottom:1px solid var(--tone-dcded4);margin-bottom:40px}h1,h2,h3{font-family:'Manrope',sans-serif}h1{font-size:clamp(37px,5vw,57px);line-height:1.15;letter-spacing:-2.2px;font-weight:600;margin:23px 0}h2{font-size:29px;line-height:1.3;letter-spacing:-1px;font-weight:600;margin:45px 0 20px}.dek{font-size:19px;line-height:1.75;color:var(--tone-657068);margin:0 0 25px}.meta{font-size:11px;color:var(--tone-718069);display:flex;gap:12px;flex-wrap:wrap}.article-body{max-width:690px}.article-body p{font-size:16px;margin:0 0 22px;color:var(--tone-46554a)}.article-body strong{color:var(--tone-24382b)}.article-body ul{padding-left:23px;margin:0 0 26px;color:var(--tone-46554a);font-size:16px}.article-body li{margin:6px 0}.repeated-work{display:flex;flex-wrap:wrap;list-style:none!important;padding:0!important;gap:8px;margin:26px 0!important}.repeated-work li{border:1px solid var(--tone-d3dcc8);border-radius:6px;font-size:12px;padding:6px 12px;margin:0}.article-body blockquote{border-left:3px solid var(--tone-8ba370);margin:30px 0;padding:15px 0 15px 24px;font-size:23px;line-height:1.55;letter-spacing:-.4px;color:var(--tone-294a38)}.article-body code{background:var(--tone-e6ebdc);border-radius:4px;padding:2px 5px;font-size:.9em}.closing{margin-top:38px;padding:28px;background:var(--tone-e9eddf);border:1px solid var(--tone-d9dfce);border-radius:12px}.closing p:last-child{margin-bottom:0}.article-footer{margin-top:50px;padding-top:28px;border-top:1px solid var(--tone-dcded4);display:flex;justify-content:space-between;gap:20px;font-size:12px;font-weight:600}.article-footer a{border-bottom:1px solid var(--tone-a8b59a)}footer{border-top:1px solid var(--tone-dcded4);padding:22px 30px;text-align:center;font-size:11px;color:var(--tone-718069)}@media(max-width:600px){main{padding:42px 23px 60px}.nav{padding:22px 23px}.brand{font-size:23px}h1{font-size:39px;letter-spacing:-1.5px}h2{font-size:26px}.dek{font-size:17px}.article-body p,.article-body ul{font-size:15px}.article-body blockquote{font-size:21px}.article-footer{flex-wrap:wrap}.closing{padding:23px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><link rel="stylesheet" href="../assets/theme.css?v=1"><script src="../assets/theme.js?v=1" defer></script></head><body><header><nav class="nav" aria-label="Article navigation"><a class="brand" href="../index.html">DevFoundy<span>.</span></a><a class="back" href="../journal.html">← Back to the journal</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button></nav></header><main><article><header class="article-head"><div class="eyebrow">The DevFoundy journal / Building with AI</div><h1>AI Is Changing Programming, But What Does It Really Mean to Be a Developer?</h1><p class="dek">My perspective on AI-assisted development, why understanding code still matters, and what it means to take responsibility for the software we build.</p><div class="meta"><span>By Kenta | Founder of DevFoundry</span><span aria-hidden="true">·</span><time datetime="2026-11-06">November 6, 2026</time><span aria-hidden="true">·</span><span>10 min read</span></div></header><div class="article-body">
+<h2>Introduction: Programming Is Changing</h2>
+<p>Artificial intelligence has changed the way we approach programming, and I believe we're only at the beginning of that transformation.</p>
+<p>A few years ago, developing software usually meant spending hours writing code, debugging errors, and figuring out how to turn an idea into something functional. Today, AI can generate entire sections of code in seconds, explain complicated functions, and help people build applications that might previously have taken them months to develop.</p>
+<p>In my opinion, AI has already replaced a significant amount of traditional coding work. However, that doesn't mean programming knowledge is becoming useless.</p>
+<p>In fact, I believe it's becoming important in a different way.</p>
+<p>The question is no longer just whether someone can write code. It's whether they understand what they're building, why they're building it, and how to make it work properly.</p>
+<p>This raises an interesting question: <strong>What actually makes someone a developer in the age of AI?</strong></p>
+<h2>1. AI Is Changing Programming, Not Eliminating Programmers</h2>
+<p>I believe AI has already become capable of handling many tasks that developers traditionally performed themselves.</p>
+<p>Instead of manually writing every function, developers can now explain their requirements to AI and receive working code within seconds.</p>
+<p>But there's something important that I don't think we should forget.</p>
+<p><strong>Humans still have the final say.</strong></p>
+<p>AI can suggest a solution, generate code, and even identify potential problems. However, it's ultimately the developer's responsibility to decide whether that solution is appropriate.</p>
+<p>A piece of code might work perfectly from a technical perspective but still fail to solve the actual problem.</p>
+<p>For example, AI could generate a website that functions correctly, but that doesn't automatically mean the website is easy to navigate, visually appealing, or suitable for its intended audience.</p>
+<p>That's where human judgment becomes essential.</p>
+<p>I don't believe the future of programming is simply about replacing developers with AI. I think it's about changing the role developers play.</p>
+<p>Rather than spending all their time writing instructions for computers, developers may increasingly focus on making decisions, understanding systems, reviewing solutions, and directing how software is created.</p>
+<h2>2. What Actually Makes Someone a Developer?</h2>
+<p>My definition of a developer has changed over time.</p>
+<p>Previously, I thought of developers mainly as people who received requirements and turned them into functioning software.</p>
+<p>But now, I see development as something broader.</p>
+<p>To me, a developer is someone who can take an idea, understand what they want to achieve, and communicate that idea clearly enough to turn it into something real.</p>
+<p>That process might involve writing code manually, working with a team, using AI, or combining all three.</p>
+<p>Imagine someone who builds an entire application using AI-generated code.</p>
+<p>Would I consider that person a developer?</p>
+<p>Personally, yes, although I think there's an important distinction between simply generating code and actually developing software.</p>
+<p>If someone types a vague prompt, receives an application, and publishes it without understanding how it works, I wouldn't consider that the same level of engineering as someone who understands the system, makes informed decisions, tests the application, and takes responsibility for the result.</p>
+<p>However, if someone uses AI to bring their own ideas to life, actively directs the development process, understands the software, and continuously improves it, I believe they are participating in real software development.</p>
+<p>They're simply developing in a different era.</p>
+<p><strong>The tools we use shouldn't be the only thing that defines our abilities. What matters is how effectively and responsibly we use them.</strong></p>
+<h2>3. Understanding Code Is Still Crucial</h2>
+<p>Even though I strongly support AI-assisted development, I don't believe developers should become completely dependent on it.</p>
+<p>One of my biggest concerns is what happens when AI isn't available.</p>
+<p>Imagine you're working on an important application and suddenly lose access to your AI tools. Maybe the service is unavailable, or perhaps the generated code introduces an issue that the AI repeatedly fails to solve.</p>
+<p>What happens next?</p>
+<p>If you have absolutely no understanding of the code behind your project, you might find yourself unable to continue.</p>
+<p>That's why I believe understanding code is still extremely important.</p>
+<p>In the age of AI, I think reading, interpreting, and debugging code will become increasingly valuable skills.</p>
+<p>That doesn't mean knowing how to write code is unnecessary. Developers still need enough programming knowledge to modify existing systems, identify errors, and implement solutions independently when required.</p>
+<p>Personally, I think understanding how software works is more valuable than simply memorizing syntax.</p>
+<p>AI can help us write code faster, but it shouldn't replace our willingness to learn what that code actually does.</p>
+<p><strong>A developer should be able to explain their software, not just demonstrate that it works.</strong></p>
+<h2>4. Why Human Design Decisions Still Matter</h2>
+<p>One area where I believe human involvement remains especially important is design.</p>
+<p>AI has become incredibly capable at programming, and modern AI tools can also analyze images, interpret layouts, and generate user interfaces.</p>
+<p>However, generating a design and making good design decisions aren't necessarily the same thing.</p>
+<p>AI can produce something visually impressive, but that doesn't guarantee the result matches the developer's vision or the user's needs.</p>
+<p>This is something I think about when working on my own projects.</p>
+<p>For example, when designing software such as StageWrite Studio or working on DevFoundry, I believe it's better to develop a clear concept before asking AI to implement it.</p>
+<p>That could mean drawing a rough interface, arranging shapes in a design platform, planning the navigation, or simply thinking carefully about how the application should behave.</p>
+<p>The design doesn't have to be perfect.</p>
+<p>What matters is having a direction.</p>
+<p>Instead of telling AI to create something and hoping the result looks good, I'd rather give it a concept that represents what I actually want.</p>
+<p>This approach allows AI to become a tool for implementing a vision rather than deciding the entire vision for me.</p>
+<p>I also believe human experience plays an important role in design.</p>
+<p>People understand frustration, convenience, personal preferences, and the emotional experience of using a product through their own lives.</p>
+<p>AI can recognize patterns in user behavior and help evaluate designs, but that doesn't remove the value of human creativity, empathy, and judgment.</p>
+<p><strong>AI can help build an interface. Humans still need to decide what experience that interface should create.</strong></p>
+<h2>5. Does It Matter Whether a Human or AI Wrote the Code?</h2>
+<p>There's a lot of debate about AI-assisted programming, particularly around the term <em>vibe coding</em>.</p>
+<p>Some developers argue that relying heavily on AI requires less skill than traditional programming.</p>
+<p>I understand why people might feel that way, especially when they've spent years learning programming languages, algorithms, and software engineering principles.</p>
+<p>Those skills deserve recognition.</p>
+<p>However, I think there's another perspective worth considering.</p>
+<p>From the user's point of view, what matters most?</p>
+<p>When someone visits a website, they're usually not thinking about whether the developer manually wrote every line of HTML, CSS, or JavaScript.</p>
+<p>They're thinking about whether the website works.</p>
+<p>Can they find what they're looking for? Is the interface understandable? Does the website load properly? Can they complete the task they came to do?</p>
+<p>Most users care about the experience and the result.</p>
+<p>That doesn't mean the development process is irrelevant. Security, accessibility, reliability, and maintainability are all important, even when users can't immediately see them.</p>
+<p>But I don't believe manually writing every line of code automatically makes a product better.</p>
+<p>Likewise, using AI doesn't automatically make a product worse.</p>
+<p>What matters is the quality of the finished software and whether the developer has taken responsibility for making it reliable and useful.</p>
+<h2>6. Who Deserves Credit for AI-Generated Software?</h2>
+<p>Another interesting question is who deserves credit when AI writes most of an application's code.</p>
+<p>Personally, I believe AI's contribution should be acknowledged.</p>
+<p>If AI played a major role in creating something, I don't see a reason to hide that fact.</p>
+<p>At the same time, I don't think acknowledging AI means the human developer deserves less recognition.</p>
+<p>Someone still had to identify the problem, develop the concept, communicate the requirements, evaluate the results, and decide what the finished product should become.</p>
+<p>AI systems are also the result of years of research and engineering by human developers.</p>
+<p>Without those people, the tools we use today wouldn't exist.</p>
+<p>I think it's important to recognize both the role AI plays in modern development and the human work that makes it possible.</p>
+<p>For me, being transparent about using AI is more meaningful than pretending every line of code was written manually.</p>
+<h2>7. Should Beginners Still Learn Traditional Programming?</h2>
+<p>Absolutely.</p>
+<p>Even though I believe AI-assisted development is becoming a major part of the industry, I would still encourage beginners to learn traditional programming fundamentals.</p>
+<p>Understanding variables, conditions, loops, functions, and basic program structure gives developers a foundation they can build upon.</p>
+<p>Without that foundation, it's easy to become dependent on AI without understanding what it's generating.</p>
+<p>I wouldn't necessarily tell beginners to avoid AI completely.</p>
+<p>Instead, I'd encourage them to use it as a learning tool.</p>
+<p>Ask AI to explain unfamiliar code. Compare different solutions. Try writing something yourself before asking AI to improve it.</p>
+<p>Most importantly, don't stop learning just because AI can produce an answer faster.</p>
+<p>I believe the strongest developers of the future will be people who understand programming principles while also knowing how to use AI effectively.</p>
+<p>Those two skills should complement each other rather than compete.</p>
+<h2>8. What Will Programming Look Like in Ten Years?</h2>
+<p>Predicting the future of technology is difficult, especially when AI is developing so quickly.</p>
+<p>However, I believe the next decade could bring major changes not only to software development but also to robotics and automation.</p>
+<p>I wouldn't be surprised if humanoid robots become increasingly capable and more common in real-world environments.</p>
+<p>As these technologies improve, programming may become less focused on manually writing individual instructions and more focused on designing systems, defining requirements, and supervising intelligent tools.</p>
+<p>But even in that future, I don't think traditional technical knowledge will become irrelevant.</p>
+<p>Programming languages, web technologies such as HTML, and fundamental computer science concepts will still provide an important understanding of how digital systems operate, even if the tools and languages themselves evolve.</p>
+<p>We should also remember where today's technology came from.</p>
+<p>AI didn't appear out of nowhere.</p>
+<p>It exists because generations of researchers, engineers, mathematicians, and programmers developed the foundations that made it possible.</p>
+<p>I think those contributions deserve enormous recognition.</p>
+<p>The next generation of developers may use completely different tools, but they'll still be building upon the achievements of the people who came before them.</p>
+<h2>Final Thoughts: Being a Developer Is About More Than Writing Code</h2>
+<p>I don't believe the future of software development should be a competition between traditional programmers and AI-assisted developers.</p>
+<p>Both approaches have value.</p>
+<p>Traditional programming teaches us how systems work, how to solve problems logically, and how to understand the technology we depend on.</p>
+<p>AI-assisted development allows us to experiment faster, explore ideas, and potentially create things that would otherwise require far more time and resources.</p>
+<p>I think the best approach is to combine the strengths of both.</p>
+<p>Use AI when it makes sense. Learn programming so you understand what you're doing. Make your own design decisions. Question the results you're given. And most importantly, take responsibility for the software you create.</p>
+<p>To traditional programmers, I'd say that using AI doesn't automatically mean someone lacks creativity or technical understanding.</p>
+<p>And to AI-assisted developers, I'd say that generating working code doesn't mean there's nothing left to learn.</p>
+<p><strong>AI might change how we write software, but it doesn't change why we build it.</strong></p>
+<p>At the end of the day, I believe being a developer isn't just about how many lines of code you can write.</p>
+<p>It's about having an idea, understanding the problem, making thoughtful decisions, and turning that idea into something genuinely useful.</p>
+<p>And regardless of how advanced AI becomes, I believe those qualities will continue to matter.</p>
+<hr>
+<p><em>Written by Kenta, Founder of DevFoundry.</em></p>
+<p><em>DevFoundry explores software development, web design, AI-assisted engineering, and the process of turning ideas into real digital products.</em></p>
+</div><nav class="article-footer" aria-label="After the article"><a href="../journal.html">← Back to the journal</a><a href="../index.html#contact">Have an idea? Get in touch ↗</a></nav></article></main><footer>DevFoundy · Created by Kenta</footer></body></html>
