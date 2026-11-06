@@ -1,0 +1,14 @@
+.journal-tools{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr) auto;align-items:end;gap:18px;margin-bottom:14px}
+.journal-tools[hidden],.journal-list [hidden]{display:none!important}
+.journal-field{display:grid;gap:8px;min-width:0;font-size:12px;font-weight:600}
+.journal-field input,.journal-field select{width:100%;min-height:48px;border:1px solid var(--tone-d1dac7);border-radius:8px;background:var(--paper);color:var(--ink);padding:12px 14px;font:inherit;font-size:14px;color-scheme:light}
+[data-theme="dark"] .journal-field input,[data-theme="dark"] .journal-field select{color-scheme:dark}
+.journal-field input::placeholder{color:var(--muted);opacity:1}
+.journal-field input:focus-visible,.journal-field select:focus-visible,.journal-reset:focus-visible{outline:3px solid var(--tone-759450);outline-offset:3px}
+.journal-reset{min-height:48px;border:1px solid var(--tone-d1dac7);border-radius:8px;background:transparent;color:var(--ink);padding:10px 16px;font:inherit;font-size:12px;cursor:pointer}
+.journal-results{font-size:12px;color:var(--muted);margin:0 0 30px;min-height:20px}
+.journal-empty{padding:35px 0;font-size:15px;color:var(--muted)}
+.notebook-archive{margin-top:80px;padding-top:40px;border-top:1px solid var(--tone-d1dac7)}
+.notebook-heading{font-size:30px;line-height:1.25;letter-spacing:-1px;margin:0 0 12px}
+.notebook-intro{font-size:14px;color:var(--muted);margin:0 0 32px;max-width:550px}
+@media(max-width:680px){.journal-tools{grid-template-columns:1fr;gap:14px}.journal-reset{justify-self:start}.notebook-archive{margin-top:55px;padding-top:30px}.notebook-heading{font-size:27px}}
