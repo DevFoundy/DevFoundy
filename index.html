@@ -31,10 +31,11 @@
 @media(max-width:900px){.appointment-panel{padding:35px;gap:26px}}
 @media(max-width:680px){.appointment{padding-bottom:58px}.appointment-panel{grid-template-columns:minmax(0,1fr);padding:28px 23px}.appointment-action{align-items:stretch}.booking-link{width:100%;padding:13px 14px}.booking-note{text-align:center}}
 html[data-language="ja"] #appointment{display:none!important}.language-toggle{flex:0 0 auto;border:1px solid var(--tone-b8c1b4);border-radius:7px;background:transparent;color:var(--ink);padding:8px 10px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}.language-toggle:hover{background:var(--tone-e9ecdf)}html[lang="ja"] body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}html[lang="ja"] .eyebrow{text-transform:none;letter-spacing:.08em}@media(max-width:900px){.nav{gap:10px}html[lang="ja"] .nav nav{gap:9px}}@media(max-width:680px){.language-toggle{margin-left:auto}.nav{gap:9px}}
+.sakura-fall{position:fixed;inset:0;z-index:160;pointer-events:none;overflow:hidden}.sakura-blossom{position:absolute;top:0;left:var(--x);width:var(--size);height:var(--size);opacity:0;animation:sakura-fall var(--duration) linear var(--delay) both}.sakura-blossom svg{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 2px #6d3c4a35)}@keyframes sakura-fall{0%{opacity:0;transform:translate3d(0,-50px,0) rotate(0)}8%{opacity:.95}85%{opacity:.95}100%{opacity:0;transform:translate3d(var(--drift),calc(100vh + 60px),0) rotate(var(--spin))}}@media(prefers-reduced-motion:reduce){.sakura-fall{display:none}}
 </style>
 <link rel="stylesheet" href="assets/interactions.css?v=5">
 <script src="assets/interactions.js?v=5" defer></script>
-<script src="assets/language.js?v=1" defer></script>
+<script src="assets/language.js?v=2" defer></script>
 <link rel="stylesheet" href="assets/theme.css?v=1"><script src="assets/theme.js?v=1" defer></script><script>(()=>{const go=()=>{if(location.hash==='#blog')location.replace('journal.html');};go();window.addEventListener('hashchange',go);})();</script></head>
 <body id="top"><div class="story-curtain" aria-hidden="true"><span>My story.</span></div>
 <a href="#main" style="position:fixed;top:-100px;left:20px;z-index:100;background:#fff;padding:10px" onfocus="this.style.top='10px'" onblur="this.style.top='-100px'">Skip to content</a>
