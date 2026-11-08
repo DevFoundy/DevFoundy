@@ -39,6 +39,9 @@
   const courseLinks = [...document.querySelectorAll('a[href]')]
     .filter(link => link.href.includes('DevFoundy/devfoundry-first-website'))
     .map(link => ({link,english:link.href}));
+  const codeBlocks = pagePath === 'python-if-cheat-sheet.html'
+    ? [...document.querySelectorAll('pre code')].map(node => ({node,english:node.textContent}))
+    : [];
   function setLanguage(language) {
     const japanese = language === 'ja';
     root.lang = japanese ? 'ja' : 'en';
@@ -58,6 +61,12 @@
         : japanese && english.endsWith('/devfoundry-first-website')
           ? 'https://github.com/DevFoundy/devfoundry-first-website/blob/main/README.ja.md'
           : english;
+    });
+    codeBlocks.forEach(({node,english}) => {
+      node.textContent = japanese
+        ? english.replace(/(["'])(.*?)\1/g, (literal,quote,value) =>
+          Object.hasOwn(translations,value) ? quote + translations[value] + quote : literal)
+        : english;
     });
     button.setAttribute('aria-label',japanese ? '言語を選択' : 'Choose language');
     button.title = button.getAttribute('aria-label');
