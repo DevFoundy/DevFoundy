@@ -7,7 +7,10 @@
     root.dataset.theme = theme;
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111c18' : '#f6f4ee');
     document.querySelectorAll('.theme-toggle').forEach(button => {
-      const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      const japanese = root.lang === 'ja';
+      const label = theme === 'dark'
+        ? (japanese ? 'ライトモードに切り替える' : 'Switch to light mode')
+        : (japanese ? 'ダークモードに切り替える' : 'Switch to dark mode');
       button.setAttribute('aria-label', label);
       button.title = label;
       button.hidden = false;
@@ -30,5 +33,7 @@
     try { const saved = localStorage.getItem('devfoundy-theme'); chosen = saved === 'dark' || saved === 'light' ? saved : null; } catch {}
     apply(chosen || (system.matches ? 'dark' : 'light'));
   });
+  window.addEventListener('devfoundy-language-change', () => apply(root.dataset.theme || 'light'));
   apply(chosen || root.dataset.theme || (system.matches ? 'dark' : 'light'));
 })();
+
