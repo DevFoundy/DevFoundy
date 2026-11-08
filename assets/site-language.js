@@ -30,9 +30,9 @@
     while (walker.nextNode()) if (!originals.has(walker.currentNode)) originals.set(walker.currentNode, walker.currentNode.nodeValue);
   }
   collect(document.body);
-  const attributes = [...document.querySelectorAll('[aria-label],[placeholder],[alt],[title]')]
+  const attributes = [...document.querySelectorAll('[aria-label],[placeholder],[alt],[title],meta[name="description"],meta[property="og:title"],meta[property="og:description"]')]
     .filter(element => !element.closest('.language-picker'))
-    .flatMap(element => ['aria-label','placeholder','alt','title']
+    .flatMap(element => ['aria-label','placeholder','alt','title',...(element.tagName === 'META' ? ['content'] : [])]
       .filter(name => element.hasAttribute(name))
       .map(name => ({element,name,english:element.getAttribute(name)})));
   function setLanguage(language) {
