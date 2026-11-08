@@ -9,9 +9,27 @@
   const archive = document.querySelector('.notebook-archive');
   const mainGrid = document.getElementById('journal-grid');
   const normalize = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’‘]/g, "'");
+  const categoryGroups = {
+    'Design & development': 'Development', 'Developer resources': 'Development',
+    'Interface details': 'Development', 'Learning & resources': 'Development',
+    'Learning development': 'Development', 'My developer journey': 'Development',
+    'Technology & creativity': 'Development', 'Using software': 'Development',
+    'Web development': 'Development', 'Building with AI': 'Development',
+    'Creative tools': 'Development',
+    'Building in public': 'Projects', 'Founder journal': 'Projects',
+    'Product thoughts': 'Projects', 'Project journal': 'Projects',
+    'Game design': 'Games', 'Games & creativity': 'Games',
+    'Games & interests': 'Games',
+    'Music & creativity': 'Music', 'Music & personal life': 'Music',
+    'Digital life': 'Personal', 'Personal thoughts': 'Personal'
+  };
   const posts = Array.from(document.querySelectorAll('.journal-list .blog-post'), card => ({
     card,
-    category: card.querySelector('.blog-meta span').textContent.trim(),
+    category: (() => {
+      const label = card.querySelector('.blog-meta span');
+      label.textContent = categoryGroups[label.textContent.trim()] || label.textContent.trim();
+      return label.textContent;
+    })(),
     text: normalize(card.textContent),
     archived: Boolean(card.closest('.notebook-archive'))
   }));
@@ -26,8 +44,7 @@
     const words = normalize(search.value).trim().split(/\s+/).filter(Boolean);
     let count = 0, currentCount = 0, archiveCount = 0;
     for (const post of posts) {
-      const visibleText = normalize(post.card.textContent);
-      const matches = (!category.value || post.category === category.value) && words.every(word => post.text.includes(word) || visibleText.includes(word));
+      const matches = (!category.value || post.category === category.value) && words.every(word => post.text.includes(word));
       post.card.hidden = !matches;
       if (matches) {
         count++;
@@ -37,9 +54,7 @@
     mainGrid.hidden = currentCount === 0;
     if (archive) archive.hidden = archiveCount === 0;
     empty.hidden = count !== 0;
-    status.textContent = document.documentElement.lang === 'ja'
-      ? `${count}件の記事${words.length || category.value ? `（全${posts.length}件から検索）` : ' · 新しい順'}`
-      : `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
+    status.textContent = `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
     reset.hidden = !search.value && !category.value;
   }
   search.addEventListener('input', filter);
@@ -52,7 +67,5 @@
     search.focus();
   });
   tools.hidden = false;
-  window.addEventListener('devfoundy-language-change', filter);
   filter();
 })();
-
