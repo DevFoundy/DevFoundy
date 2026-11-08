@@ -26,7 +26,8 @@
     const words = normalize(search.value).trim().split(/\s+/).filter(Boolean);
     let count = 0, currentCount = 0, archiveCount = 0;
     for (const post of posts) {
-      const matches = (!category.value || post.category === category.value) && words.every(word => post.text.includes(word));
+      const visibleText = normalize(post.card.textContent);
+      const matches = (!category.value || post.category === category.value) && words.every(word => post.text.includes(word) || visibleText.includes(word));
       post.card.hidden = !matches;
       if (matches) {
         count++;
@@ -36,7 +37,9 @@
     mainGrid.hidden = currentCount === 0;
     if (archive) archive.hidden = archiveCount === 0;
     empty.hidden = count !== 0;
-    status.textContent = `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
+    status.textContent = document.documentElement.lang === 'ja'
+      ? `${count}件の記事${words.length || category.value ? `（全${posts.length}件から検索）` : ' · 新しい順'}`
+      : `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
     reset.hidden = !search.value && !category.value;
   }
   search.addEventListener('input', filter);
@@ -49,5 +52,7 @@
     search.focus();
   });
   tools.hidden = false;
+  window.addEventListener('devfoundy-language-change', filter);
   filter();
 })();
+
