@@ -42,6 +42,8 @@
   const codeBlocks = pagePath === 'python-if-cheat-sheet.html'
     ? [...document.querySelectorAll('pre code')].map(node => ({node,english:node.textContent}))
     : [];
+  const pythonDownload = document.querySelector('a[href$="resources/python-if-examples.py"]');
+  const originalPythonDownload = pythonDownload?.href;
   function setLanguage(language) {
     const japanese = language === 'ja';
     root.lang = japanese ? 'ja' : 'en';
@@ -68,6 +70,9 @@
           Object.hasOwn(translations,value) ? quote + translations[value] + quote : literal)
         : english;
     });
+    if (pythonDownload) pythonDownload.href = japanese
+      ? new URL('resources/python-if-examples-ja.py',location.href).href
+      : originalPythonDownload;
     button.setAttribute('aria-label',japanese ? '言語を選択' : 'Choose language');
     button.title = button.getAttribute('aria-label');
     picker.querySelector('.language-menu-title').textContent = japanese ? '言語' : 'Language';
