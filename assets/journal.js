@@ -26,7 +26,8 @@
     const words = normalize(search.value).trim().split(/\s+/).filter(Boolean);
     let count = 0, currentCount = 0, archiveCount = 0;
     for (const post of posts) {
-      const matches = (!category.value || post.category === category.value) && words.every(word => post.text.includes(word));
+      if (document.documentElement.lang === 'ja') post.japanese = normalize(post.card.textContent);
+      const matches = (!category.value || post.category === category.value) && words.every(word => normalize(post.text + ' ' + (post.japanese || '') + ' ' + post.card.textContent).includes(word));
       post.card.hidden = !matches;
       if (matches) {
         count++;
@@ -36,7 +37,9 @@
     mainGrid.hidden = currentCount === 0;
     if (archive) archive.hidden = archiveCount === 0;
     empty.hidden = count !== 0;
-    status.textContent = `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
+    status.textContent = document.documentElement.lang === 'ja'
+      ? `${count}件${words.length || category.value ? ` 見つかりました · 全${posts.length}件` : ' · 新しい順'}`
+      : `${count} ${count === 1 ? 'entry' : 'entries'}${words.length || category.value ? ` found · ${posts.length} total` : ' · newest first'}`;
     reset.hidden = !search.value && !category.value;
   }
   search.addEventListener('input', filter);
@@ -48,6 +51,8 @@
     filter();
     search.focus();
   });
+  window.addEventListener('devfoundy:languagechange', filter);
   tools.hidden = false;
   filter();
 })();
+

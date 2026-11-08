@@ -1,0 +1,12 @@
+.language-toggle{flex:0 0 auto;border:1px solid var(--tone-b8c1b4);border-radius:7px;background:transparent;color:var(--ink);padding:8px 10px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}.language-toggle:hover{background:var(--tone-e9ecdf)}html[lang="ja"] body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}html[lang="ja"] .eyebrow{text-transform:none;letter-spacing:.08em}@media(max-width:900px){.nav{gap:10px}html[lang="ja"] .nav nav{gap:9px}}@media(max-width:680px){.language-toggle{margin-left:auto}.nav{gap:9px}}
+.sakura-fall{position:fixed;inset:0;z-index:160;pointer-events:none;overflow:hidden}.sakura-blossom{position:absolute;top:0;left:var(--x);width:var(--size);height:var(--size);opacity:0;animation:sakura-fall var(--duration) linear var(--delay) both}.sakura-blossom svg{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 2px #6d3c4a35)}@keyframes sakura-fall{0%{opacity:0;transform:translate3d(0,-50px,0) rotate(0)}8%{opacity:.95}85%{opacity:.95}100%{opacity:0;transform:translate3d(var(--drift),calc(100vh + 60px),0) rotate(var(--spin))}}@media(prefers-reduced-motion:reduce){.sakura-fall{display:none}}
+
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3,html[lang="ja"] button,html[lang="ja"] input,html[lang="ja"] select{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif}
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{letter-spacing:normal;line-height:1.45;overflow-wrap:anywhere}
+html[lang="ja"] p{line-height:1.9;overflow-wrap:anywhere}
+.language-toggle{font-family:inherit;color:var(--tone-202d27,#202d27);border-color:var(--tone-dcded4,#dcded4);background:transparent}
+.language-toggle:focus-visible{outline:3px solid var(--tone-719a43,#719a43);outline-offset:4px}
+.nav>.language-toggle{margin-left:0}
+@media(max-width:680px){.nav{flex-wrap:wrap}.nav>.language-toggle{margin-left:auto}}
+@media print{.language-toggle,.sakura-fall{display:none!important}}
+@media(max-width:680px){html[lang="ja"] h1{font-size:clamp(32px,9vw,40px)}}
