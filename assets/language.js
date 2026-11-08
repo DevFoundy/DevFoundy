@@ -193,6 +193,39 @@
   const appointment = document.getElementById('appointment');
   if (!button || !appointment) return;
 
+  let blossomLayer;
+  let blossomCleanup;
+  const blossomSvg = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><ellipse cx="12" cy="6.6" rx="4.2" ry="6.3"/><ellipse cx="12" cy="6.6" rx="4.2" ry="6.3" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.6" rx="4.2" ry="6.3" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.6" rx="4.2" ry="6.3" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.6" rx="4.2" ry="6.3" transform="rotate(288 12 12)"/></g><circle cx="12" cy="12" r="2.1" fill="#f7d782"/></svg>`;
+
+  function clearBlossoms() {
+    window.clearTimeout(blossomCleanup);
+    blossomLayer?.remove();
+    blossomLayer = undefined;
+  }
+
+  function fallBlossoms() {
+    clearBlossoms();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    blossomLayer = document.createElement('div');
+    blossomLayer.className = 'sakura-fall';
+    blossomLayer.setAttribute('aria-hidden', 'true');
+    for (let i = 0; i < 24; i += 1) {
+      const blossom = document.createElement('span');
+      blossom.className = 'sakura-blossom';
+      blossom.innerHTML = blossomSvg;
+      blossom.style.setProperty('--x', `${(i + Math.random() * .8) * 100 / 24}%`);
+      blossom.style.setProperty('--drift', `${(Math.random() - .5) * 180}px`);
+      blossom.style.setProperty('--duration', `${3.4 + Math.random() * 1.6}s`);
+      blossom.style.setProperty('--delay', `${Math.random() * .9}s`);
+      blossom.style.setProperty('--spin', `${280 + Math.random() * 440}deg`);
+      blossom.style.setProperty('--size', `${13 + Math.random() * 12}px`);
+      blossom.style.color = ['#f7b7ca', '#f4a8c1', '#f9c9d5'][i % 3];
+      blossomLayer.append(blossom);
+    }
+    document.body.append(blossomLayer);
+    blossomCleanup = window.setTimeout(clearBlossoms, 6200);
+  }
+
   const originals = new Map();
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
@@ -242,6 +275,11 @@
     try { localStorage.setItem('devfoundy-language', language); } catch {}
   }
 
-  button.addEventListener('click', () => setLanguage(root.lang === 'ja' ? 'en' : 'ja'));
+  button.addEventListener('click', () => {
+    const language = root.lang === 'ja' ? 'en' : 'ja';
+    setLanguage(language);
+    if (language === 'ja') fallBlossoms();
+    else clearBlossoms();
+  });
   setLanguage(root.dataset.language === 'ja' ? 'ja' : 'en');
 })();
