@@ -1,6 +1,10 @@
 (() => {
   const root = document.documentElement;
-  const translations = window.devfoundyJournalTranslations || {};
+  const pagePath = location.pathname.split('/DevFoundy/').pop().replace(/^\//, '') || 'index.html';
+  const translations = {
+    ...(window.devfoundyJournalTranslations || {}),
+    ...(window.devfoundyPageTranslations?.[pagePath] || {})
+  };
   const originalTitle = document.title;
   const header = document.querySelector('header .nav') || document.querySelector('header');
   if (!header) return;
