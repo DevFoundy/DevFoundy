@@ -1,0 +1,403 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><script>try{document.documentElement.lang=localStorage.getItem('devfoundy-language')==='ja'?'ja':'en'}catch{}</script><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Free HTML, CSS and Git reference sheets from DevFoundy."><title>Free coding reference sheets — DevFoundy</title><link rel="stylesheet" href="assets/theme.css?v=1"><link rel="stylesheet" href="assets/site-language.css?v=3"><style>
+:root{--ink:#203a2b;--paper:#f6f4ee;--muted:#657068;--green:#719a43}html[data-theme=dark]{--ink:#e8f0e7;--paper:#17241e;--muted:#b6c8b6;--green:#a7cc78}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 system-ui,-apple-system,sans-serif}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--green);outline-offset:3px}.nav{max-width:1120px;margin:auto;padding:23px 30px;display:flex;align-items:center;gap:24px;border-bottom:1px solid #8a9b8540}.brand{font-size:25px;font-weight:800;text-decoration:none;letter-spacing:-1px;margin-right:auto}.brand span{color:var(--green)}.nav-link{font-size:13px;font-weight:650;text-decoration:none}.nav-link:hover{text-decoration:underline}main{max-width:1040px;margin:auto;padding:65px 30px 100px}.eyebrow{display:block;color:var(--green);font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase;margin-bottom:12px}.hero{padding-bottom:40px;border-bottom:1px solid #8a9b8540}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.12;letter-spacing:-.05em;margin:0 0 18px}.hero p{max-width:660px;color:var(--muted);font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:9px;background:#294a38;color:white;text-decoration:none;font-size:13px;font-weight:700}.btn:hover{background:#3e6449}.btn.secondary{background:transparent;color:var(--ink);border:1px solid #8a9b8577}.jump{display:flex;gap:9px;flex-wrap:wrap;margin:36px 0 15px}.jump a{padding:8px 13px;border:1px solid #8a9b8577;border-radius:99px;text-decoration:none;font-size:13px;font-weight:700}.jump a:hover{background:#8ba37033}.reference{padding:38px 0 50px;border-bottom:1px solid #8a9b8540;scroll-margin-top:20px}.section-heading h2{font-size:29px;letter-spacing:-.03em;margin:0 0 18px}.sheet{overflow-x:auto}.sheet h1{display:none}.sheet table{border-collapse:separate;border-spacing:0;width:100%;min-width:560px;background:#fffefa0a;border:1px solid #8a9b8555;border-radius:12px;overflow:hidden}.sheet th,.sheet td{text-align:left;padding:11px 15px;border-bottom:1px solid #8a9b8544;vertical-align:top}.sheet th{background:#8ba37022;font-size:12px}.sheet tr:last-child td{border-bottom:0}.sheet td:first-child{width:38%;font-weight:600}.sheet code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:#8ba37022;border-radius:4px;padding:2px 4px}.sheet p{color:var(--muted);margin:20px 0 0}.language-ja{display:none}html[lang=ja] .language-en{display:none}html[lang=ja] .language-ja{display:block}footer{border-top:1px solid #8a9b8540;text-align:center;padding:24px;color:var(--muted);font-size:12px}@media(max-width:620px){.nav{padding:19px 20px;gap:12px;flex-wrap:wrap}.brand{width:100%;margin:0}.nav-link{margin-right:auto}main{padding:44px 20px 70px}.hero h1{font-size:40px}.sheet th,.sheet td{padding:10px}}
+</style></head><body><header><nav class="nav"><a class="brand" href="index.html">DevFoundy<span>.</span></a><a class="nav-link" href="index.html#shop" data-en="← Back to resources" data-ja="← 学習資料に戻る">← Back to resources</a><a class="nav-link" href="journal.html" data-en="Journal" data-ja="ジャーナル">Journal</a><div class="language-picker"><button class="language-toggle" type="button" aria-label="Choose language" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" title="Choose language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z"/></svg></button><div class="language-menu" id="language-menu" hidden><div class="language-menu-title">Language</div><button class="language-option" type="button" data-language-option="en" lang="en"><span>English</span><span class="language-check" aria-hidden="true">✓</span></button><button class="language-option" type="button" data-language-option="ja" lang="ja"><span>日本語</span><span class="language-check" aria-hidden="true">✓</span></button></div></div></nav></header><main><div class="hero"><span class="eyebrow" data-en="Free learning resources" data-ja="無料の学習資料">Free learning resources</span><h1 data-en="Keep a reference nearby." data-ja="手元に置ける早見表。">Keep a reference nearby.</h1><p data-en="Quick guides to HTML, CSS and Git for your first website. Choose a topic below, or open the complete beginner course." data-ja="初めてのウェブサイト制作に役立つHTML・CSS・Gitの早見表です。項目を選ぶか、初心者向け講座を開いてください。">Quick guides to HTML, CSS and Git for your first website. Choose a topic below, or open the complete beginner course.</p><div class="hero-actions"><a class="btn" id="course-link" href="https://github.com/DevFoundy/devfoundry-first-website/blob/main/course/DevFoundry-Build-and-Deploy-Your-First-Website.pdf" target="_blank" rel="noopener noreferrer" data-en="Read the free course ↗" data-ja="日本語の講座を読む ↗">Read the free course ↗</a><a class="btn secondary" id="files-link" href="https://github.com/DevFoundy/devfoundry-first-website" target="_blank" rel="noopener noreferrer" data-en="Get the course files ↗" data-ja="教材ファイルを見る ↗">Get the course files ↗</a></div></div><div class="jump"><a href="#html">HTML</a><a href="#css">CSS</a><a href="#git">Git</a></div><section class="reference" id="html"><div class="section-heading"><span class="eyebrow">HTML</span><h2 data-en="HTML cheat sheet" data-ja="HTML早見表">HTML cheat sheet</h2></div><div class="sheet language-en"><h1>HTML cheat sheet</h1>
+<table>
+<thead>
+<tr>
+<th><code>Element or attribute</code></th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Request modern HTML behavior</td>
+</tr>
+<tr>
+<td><code>html lang=&quot;en&quot;</code></td>
+<td>Declare the page language</td>
+</tr>
+<tr>
+<td><code>head / title / meta</code></td>
+<td>Metadata, tab title and viewport setup</td>
+</tr>
+<tr>
+<td><code>header / nav / main / footer</code></td>
+<td>Meaningful page regions</td>
+</tr>
+<tr>
+<td><code>section / article / div</code></td>
+<td>Named topic, independent item, neutral wrapper</td>
+</tr>
+<tr>
+<td><code>h1 / h2 / h3 / p</code></td>
+<td>Content hierarchy and paragraphs</td>
+</tr>
+<tr>
+<td><code>ul / li</code></td>
+<td>Unordered list and list item</td>
+</tr>
+<tr>
+<td><code>a href=&quot;#about&quot;</code></td>
+<td>Navigate to the unique id=&quot;about&quot;</td>
+</tr>
+<tr>
+<td><code>img src=&quot;...&quot; alt=&quot;...&quot;</code></td>
+<td>Image path and text alternative</td>
+</tr>
+<tr>
+<td><code>button</code></td>
+<td>A native keyboard-accessible action control</td>
+</tr>
+<tr>
+<td><code>class / id</code></td>
+<td>Reusable grouping / unique identifier</td>
+</tr>
+<tr>
+<td><code>hidden / data-category</code></td>
+<td>Hide inactive content / store a custom value</td>
+</tr>
+</tbody>
+</table>
+<p>Checklist: valid nesting, matching closing tags, one main landmark, useful text, working paths and unique IDs. Use a button for an action and a link for a destination.</p>
+</div><div class="sheet language-ja"><h1>HTML早見表</h1>
+<table>
+<thead>
+<tr>
+<th>要素・属性</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>現在のHTML標準でページを表示する</td>
+</tr>
+<tr>
+<td><code>html lang=&quot;ja&quot;</code></td>
+<td>ページの言語を日本語に指定する。英語ページでは <code>en</code> を使う</td>
+</tr>
+<tr>
+<td><code>head / title / meta</code></td>
+<td>ページ情報、タブのタイトル、画面幅の設定</td>
+</tr>
+<tr>
+<td><code>header / nav / main / footer</code></td>
+<td>ヘッダー、ナビゲーション、本文、フッターを示す</td>
+</tr>
+<tr>
+<td><code>section / article / div</code></td>
+<td>話題ごとの区切り、独立した記事、汎用の箱</td>
+</tr>
+<tr>
+<td><code>h1 / h2 / h3 / p</code></td>
+<td>見出しの階層と段落</td>
+</tr>
+<tr>
+<td><code>ul / li</code></td>
+<td>箇条書きと各項目</td>
+</tr>
+<tr>
+<td><code>a href=&quot;#about&quot;</code></td>
+<td><code>id=&quot;about&quot;</code> の場所へ移動するリンク</td>
+</tr>
+<tr>
+<td><code>img src=&quot;...&quot; alt=&quot;...&quot;</code></td>
+<td>画像の場所と代替テキスト</td>
+</tr>
+<tr>
+<td><code>button</code></td>
+<td>キーボードでも操作できるボタン</td>
+</tr>
+<tr>
+<td><code>class / id</code></td>
+<td>繰り返し使う分類と、一意の識別子</td>
+</tr>
+<tr>
+<td><code>hidden / data-category</code></td>
+<td>内容を非表示にする属性と、独自データの保存</td>
+</tr>
+</tbody>
+</table>
+<p><strong>確認ポイント:</strong> タグが正しく入れ子になっているか、閉じタグが対応しているか、<code>main</code> が一つか、リンク先や画像のパスが動くか、<code>id</code> が重複していないかを確認しましょう。操作にはボタン、移動にはリンクを使います。</p>
+</div></section><section class="reference" id="css"><div class="section-heading"><span class="eyebrow">CSS</span><h2 data-en="CSS cheat sheet" data-ja="CSS早見表">CSS cheat sheet</h2></div><div class="sheet language-en"><h1>CSS cheat sheet</h1>
+<table>
+<thead>
+<tr>
+<th><code>Pattern</code></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.card / #projects / h1</code></td>
+<td>Class / ID / element selector</td>
+</tr>
+<tr>
+<td><code>color / background</code></td>
+<td>Text color / background fill</td>
+</tr>
+<tr>
+<td><code>var(--accent)</code></td>
+<td>Read a custom property</td>
+</tr>
+<tr>
+<td><code>padding / margin / gap</code></td>
+<td>Inner space / outer space / space between items</td>
+</tr>
+<tr>
+<td><code>border / border-radius</code></td>
+<td>Edge / corner rounding</td>
+</tr>
+<tr>
+<td><code>box-sizing: border-box</code></td>
+<td>Include padding and border in a declared width</td>
+</tr>
+<tr>
+<td><code>display: flex</code></td>
+<td>Arrange direct children on a main axis</td>
+</tr>
+<tr>
+<td><code>justify-content / align-items</code></td>
+<td>Align on main axis / cross axis</td>
+</tr>
+<tr>
+<td><code>flex-wrap: wrap</code></td>
+<td>Allow flex items onto another line</td>
+</tr>
+<tr>
+<td><code>display: grid</code></td>
+<td>Create a row and column layout</td>
+</tr>
+<tr>
+<td><code>repeat(3, minmax(0, 1fr))</code></td>
+<td>Three equally flexible Grid tracks</td>
+</tr>
+<tr>
+<td><code>width: min(1100px, calc(100% - 2rem))</code></td>
+<td>Bounded fluid page width</td>
+</tr>
+<tr>
+<td><code>max-width: 100%; height: auto</code></td>
+<td>Let images shrink proportionally</td>
+</tr>
+<tr>
+<td><code>@media (min-width: 640px)</code></td>
+<td>Apply rules at or above this viewport width</td>
+</tr>
+<tr>
+<td><code>:hover / :focus-visible</code></td>
+<td>Pointer feedback / visible keyboard focus</td>
+</tr>
+<tr>
+<td><code>transition / transform</code></td>
+<td>Smooth a change / visually move an element</td>
+</tr>
+</tbody>
+</table>
+<p>When styling fails, check the matching selector, stylesheet path, cascade, spelling and missing braces. Inspect the element instead of randomly increasing selector specificity. The final course's only !important rule protects the native hidden attribute from layout overrides.</p>
+</div><div class="sheet language-ja"><h1>CSS早見表</h1>
+<table>
+<thead>
+<tr>
+<th>書き方</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.card / #projects / h1</code></td>
+<td>クラス、ID、要素を選ぶセレクター</td>
+</tr>
+<tr>
+<td><code>color / background</code></td>
+<td>文字色と背景色</td>
+</tr>
+<tr>
+<td><code>var(--accent)</code></td>
+<td>CSSのカスタムプロパティを使う</td>
+</tr>
+<tr>
+<td><code>padding / margin / gap</code></td>
+<td>内側の余白、外側の余白、要素間のすき間</td>
+</tr>
+<tr>
+<td><code>border / border-radius</code></td>
+<td>枠線と角の丸み</td>
+</tr>
+<tr>
+<td><code>box-sizing: border-box</code></td>
+<td>指定した幅に余白と枠線を含める</td>
+</tr>
+<tr>
+<td><code>display: flex</code></td>
+<td>子要素を一方向に並べる</td>
+</tr>
+<tr>
+<td><code>justify-content / align-items</code></td>
+<td>主軸と交差軸で配置を調整する</td>
+</tr>
+<tr>
+<td><code>flex-wrap: wrap</code></td>
+<td>入りきらない要素を次の行へ送る</td>
+</tr>
+<tr>
+<td><code>display: grid</code></td>
+<td>行と列のレイアウトを作る</td>
+</tr>
+<tr>
+<td><code>repeat(3, minmax(0, 1fr))</code></td>
+<td>均等に伸びる3列を作る</td>
+</tr>
+<tr>
+<td><code>width: min(1100px, calc(100% - 2rem))</code></td>
+<td>画面に合わせつつ最大幅を制限する</td>
+</tr>
+<tr>
+<td><code>max-width: 100%; height: auto</code></td>
+<td>画像の比率を保って縮小する</td>
+</tr>
+<tr>
+<td><code>@media (min-width: 640px)</code></td>
+<td>画面幅が640px以上のときに適用する</td>
+</tr>
+<tr>
+<td><code>:hover / :focus-visible</code></td>
+<td>ポインター操作とキーボード操作の状態を示す</td>
+</tr>
+<tr>
+<td><code>transition / transform</code></td>
+<td>変化を滑らかにする、要素を移動・変形する</td>
+</tr>
+</tbody>
+</table>
+<p>CSSが効かないときは、セレクター、ファイルのパス、上書き順、スペル、波括弧を確認しましょう。むやみにセレクターを強くする前に、開発者ツールで対象の要素を調べてください。完成版の <code>!important</code> は、標準の <code>hidden</code> 属性がレイアウト指定で無効にならないようにするためだけに使います。</p>
+</div></section><section class="reference" id="git"><div class="section-heading"><span class="eyebrow">GIT</span><h2 data-en="Git cheat sheet" data-ja="Git早見表">Git cheat sheet</h2></div><div class="sheet language-en"><h1>Git cheat sheet</h1>
+<table>
+<thead>
+<tr>
+<th><code>Command</code></th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git --version</code></td>
+<td>Check that Git is installed</td>
+</tr>
+<tr>
+<td><code>git init</code></td>
+<td>Create a repository in the current folder</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>Show staged, unstaged and untracked changes</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>Inspect unstaged text changes</td>
+</tr>
+<tr>
+<td><code>git add index.html</code></td>
+<td>Stage one file's current changes</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>Stage changes under the current directory</td>
+</tr>
+<tr>
+<td><code>git diff --cached</code></td>
+<td>Inspect the staged changes</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;Message&quot;</code></td>
+<td>Save the staged snapshot locally</td>
+</tr>
+<tr>
+<td><code>git log --oneline -5</code></td>
+<td>Review the five latest commits</td>
+</tr>
+<tr>
+<td><code>git remote -v</code></td>
+<td>Inspect remote repository addresses</td>
+</tr>
+<tr>
+<td><code>git push -u origin main</code></td>
+<td>First push and upstream setup</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Send new commits to the configured upstream</td>
+</tr>
+<tr>
+<td><code>git pull --ff-only</code></td>
+<td>Get remote changes only if a fast-forward is possible</td>
+</tr>
+</tbody>
+</table>
+<p>If pull refuses because histories diverged, stop and inspect rather than using force or discarding work. Pull is useful when the remote changed on another computer or in the web editor. It is not a substitute for committing your own local work. git status and reading the error are your first recovery tools.</p>
+</div><div class="sheet language-ja"><h1>Git早見表</h1>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git --version</code></td>
+<td>Gitがインストールされているか確認する</td>
+</tr>
+<tr>
+<td><code>git init</code></td>
+<td>現在のフォルダーでリポジトリを作る</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>変更済み、ステージ済み、未追跡のファイルを確認する</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>ステージ前の変更内容を見る</td>
+</tr>
+<tr>
+<td><code>git add index.html</code></td>
+<td>指定したファイルの変更をステージする</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>現在のフォルダー以下の変更をステージする</td>
+</tr>
+<tr>
+<td><code>git diff --cached</code></td>
+<td>ステージした変更内容を見る</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;Message&quot;</code></td>
+<td>ステージした内容をローカルに保存する</td>
+</tr>
+<tr>
+<td><code>git log --oneline -5</code></td>
+<td>直近5件のコミットを見る</td>
+</tr>
+<tr>
+<td><code>git remote -v</code></td>
+<td>接続先リポジトリのURLを確認する</td>
+</tr>
+<tr>
+<td><code>git push -u origin main</code></td>
+<td>初回のプッシュと追跡先の設定を行う</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>新しいコミットを接続先へ送る</td>
+</tr>
+<tr>
+<td><code>git pull --ff-only</code></td>
+<td>安全に早送りできる場合だけ接続先の変更を取り込む</td>
+</tr>
+</tbody>
+</table>
+<p>履歴が分かれたために <code>git pull</code> が失敗したら、強制操作や変更の破棄をする前に <code>git status</code> とエラー内容を確認しましょう。別のPCやWeb上で変更したときには <code>git pull</code> が役立ちますが、自分の変更をコミットする代わりにはなりません。</p>
+</div></section></main><footer data-en="DevFoundy · Created by Kenta" data-ja="DevFoundy · Kenta制作">DevFoundy · Created by Kenta</footer><script>(()=>{const root=document.documentElement,picker=document.querySelector('.language-picker'),menu=picker.querySelector('.language-menu'),button=picker.querySelector('.language-toggle'),options=[...picker.querySelectorAll('[data-language-option]')];function setLanguage(language){const ja=language==='ja';root.lang=ja?'ja':'en';root.dataset.language=root.lang;document.querySelectorAll('[data-en][data-ja]').forEach(el=>el.textContent=el.dataset[ja?'ja':'en']);document.title=ja?'無料のプログラミング早見表 — DevFoundy':'Free coding reference sheets — DevFoundy';document.querySelector('meta[name=description]').content=ja?'DevFoundyの無料HTML・CSS・Git早見表。':'Free HTML, CSS and Git reference sheets from DevFoundy.';button.setAttribute('aria-label',ja?'言語を選択':'Choose language');button.title=button.getAttribute('aria-label');picker.querySelector('.language-menu-title').textContent=ja?'言語':'Language';options.forEach(o=>o.setAttribute('aria-current',String(o.dataset.languageOption===language)));document.querySelector('#course-link').href=ja?'course/DevFoundry-First-Website-Japanese.pdf':'https://github.com/DevFoundy/devfoundry-first-website/blob/main/course/DevFoundry-Build-and-Deploy-Your-First-Website.pdf';document.querySelector('#files-link').href=ja?'https://github.com/DevFoundy/devfoundry-first-website/blob/main/README.ja.md':'https://github.com/DevFoundy/devfoundry-first-website';try{localStorage.setItem('devfoundy-language',language)}catch{}}button.addEventListener('click',()=>{menu.hidden=!menu.hidden;button.setAttribute('aria-expanded',String(!menu.hidden))});options.forEach(o=>o.addEventListener('click',()=>{setLanguage(o.dataset.languageOption);menu.hidden=true;button.setAttribute('aria-expanded','false')}));document.addEventListener('click',e=>{if(!e.target.closest('.language-picker')){menu.hidden=true;button.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.hidden=true;button.setAttribute('aria-expanded','false');button.focus()}});setLanguage(root.lang==='ja'?'ja':'en')})();</script></body></html>

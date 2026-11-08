@@ -268,6 +268,9 @@
     const element = document.querySelector(selector);
     return element ? { element, name, japanese, english: element.getAttribute(name) } : null;
   }).filter(Boolean);
+  const courseLinks = [...document.querySelectorAll('a[href]')]
+    .filter(link => link.href.includes('DevFoundy/devfoundry-first-website'))
+    .map(link => ({ link, english: link.href }));
 
   function setLanguage(language) {
     const japanese = language === 'ja';
@@ -285,6 +288,14 @@
       if (japanese) element.setAttribute(name, translated);
       else if (english === null) element.removeAttribute(name);
       else element.setAttribute(name, english);
+    });
+    courseLinks.forEach(({ link, english }) => {
+      if (!japanese) { link.href = english; return; }
+      if (english.includes('/course/DevFoundry-Build-and-Deploy-Your-First-Website.pdf')) link.href = 'course/DevFoundry-First-Website-Japanese.pdf';
+      else if (english.includes('/cheatsheets/html-cheatsheet.md')) link.href = 'resources.html#html';
+      else if (english.includes('/cheatsheets/css-cheatsheet.md')) link.href = 'resources.html#css';
+      else if (english.includes('/cheatsheets/git-cheatsheet.md')) link.href = 'resources.html#git';
+      else if (english.endsWith('/devfoundry-first-website')) link.href = 'https://github.com/DevFoundy/devfoundry-first-website/blob/main/README.ja.md';
     });
     button.setAttribute('aria-label', japanese ? '言語を選択' : 'Choose language');
     button.title = button.getAttribute('aria-label');

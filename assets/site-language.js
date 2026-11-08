@@ -36,6 +36,9 @@
     .flatMap(element => ['aria-label','placeholder','alt','title',...(element.tagName === 'META' ? ['content'] : [])]
       .filter(name => element.hasAttribute(name))
       .map(name => ({element,name,english:element.getAttribute(name)})));
+  const courseLinks = [...document.querySelectorAll('a[href]')]
+    .filter(link => link.href.includes('DevFoundy/devfoundry-first-website'))
+    .map(link => ({link,english:link.href}));
   function setLanguage(language) {
     const japanese = language === 'ja';
     root.lang = japanese ? 'ja' : 'en';
@@ -48,6 +51,13 @@
     attributes.forEach(({element,name,english}) => {
       const translated = translations[normalize(english)];
       element.setAttribute(name,japanese && translated ? translated : english);
+    });
+    courseLinks.forEach(({link,english}) => {
+      link.href = japanese && english.includes('/course/DevFoundry-Build-and-Deploy-Your-First-Website.pdf')
+        ? new URL('course/DevFoundry-First-Website-Japanese.pdf',location.href).href
+        : japanese && english.endsWith('/devfoundry-first-website')
+          ? 'https://github.com/DevFoundy/devfoundry-first-website/blob/main/README.ja.md'
+          : english;
     });
     button.setAttribute('aria-label',japanese ? '言語を選択' : 'Choose language');
     button.title = button.getAttribute('aria-label');
