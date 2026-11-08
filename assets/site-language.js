@@ -5,6 +5,7 @@
     ...(window.devfoundyJournalTranslations || {}),
     ...(window.devfoundyPageTranslations?.[pagePath] || {})
   };
+  delete translations['.'];
   const originalTitle = document.title;
   const header = document.querySelector('header .nav') || document.querySelector('header');
   if (!header) return;
