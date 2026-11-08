@@ -187,11 +187,17 @@
   "DevFoundy. Created by Kenta.": "DevFoundy · Kenta制作",
   "Read the journal ↗": "ジャーナルを読む ↗",
   "Back to top ↑": "ページ上部へ ↑"
+  ,"Language": "言語"
+  ,"08 / Let’s connect": "08 / ご相談・ご予約"
+  ,"Book an Appointment": "面談を予約"
+  ,"Have an idea you’d like to talk through? Choose a time on my calendar and let’s discuss your project over Google Meet.": "相談したいアイデアがありますか？カレンダーからご都合のよい時間を選び、Google Meetでプロジェクトについてお話ししましょう。"
+  ,"Google Meet · Choose a time that works for you": "Google Meet · ご都合のよい時間をお選びください"
 };
   const root = document.documentElement;
   const button = document.querySelector('.language-toggle');
-  const appointment = document.getElementById('appointment');
-  if (!button || !appointment) return;
+  const menu = document.getElementById('language-menu');
+  const options = [...document.querySelectorAll('[data-language-option]')];
+  if (!button || !menu || options.length !== 2) return;
 
   let blossomLayer;
   let blossomCleanup;
@@ -229,7 +235,7 @@
   const originals = new Map();
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
-      if (!node.nodeValue.trim() || node.parentElement.closest('script, style, svg, .language-toggle, #appointment')) {
+      if (!node.nodeValue.trim() || node.parentElement.closest('script, style, svg, .language-toggle')) {
         return NodeFilter.FILTER_REJECT;
       }
       return NodeFilter.FILTER_ACCEPT;
@@ -244,7 +250,20 @@
     ['.showcase-window', 'aria-label', 'プロジェクトのスクリーンショット'],
     ['.story-chapters', 'aria-label', '私の歩み'],
     ['.catalog-links', 'aria-label', '学ぶ・資料のセクション'],
-    ['.contact-link[href^="https://discord.com"]', 'aria-label', 'Discordのプロフィールを開く']
+    ['.contact-link[href^="https://discord.com"]', 'aria-label', 'Discordのプロフィールを開く'],
+    ['.booking-link', 'aria-label', 'KentaとのGoogle Meetでの面談を予約（新しいタブで開きます）'],
+    ['[aria-label="Areas of focus"]', 'aria-label', '活動分野'],
+    ['[aria-label="Selected project screenshots"]', 'aria-label', '注目プロジェクトの画面'],
+    ['[aria-label="The threads of my story"]', 'aria-label', 'これまでの歩み'],
+    ['[aria-label="Technical experience"]', 'aria-label', '技術経験'],
+    ['[aria-label="JARVIS project preview"]', 'aria-label', 'JARVISのプレビュー'],
+    ['[aria-label="StageWrite Studio project preview"]', 'aria-label', 'StageWrite Studioのプレビュー'],
+    ['[aria-label="KineticForm project preview"]', 'aria-label', 'KineticFormのプレビュー'],
+    ['[aria-label="DebateAI project preview"]', 'aria-label', 'DebateAIのプレビュー'],
+    ['[alt="JARVIS AI personal assistant workspace with chat, voice, memory, and planning tools"]', 'alt', 'チャット、音声、メモリー、計画ツールを備えたJARVISの画面'],
+    ['[alt="StageWrite Studio songwriting workspace showing composition controls"]', 'alt', '作曲機能を表示したStageWrite Studioの画面'],
+    ['[alt="KineticForm workout planner showing a full-body training session"]', 'alt', '全身トレーニングを表示したKineticFormの画面'],
+    ['[alt="DebateAI workspace showing tools for preparing a timed debate speech"]', 'alt', '時間制限付きディベートの準備ツールを表示したDebateAIの画面']
   ].map(([selector, name, japanese]) => {
     const element = document.querySelector(selector);
     return element ? { element, name, japanese, english: element.getAttribute(name) } : null;
@@ -267,19 +286,44 @@
       else if (english === null) element.removeAttribute(name);
       else element.setAttribute(name, english);
     });
-    appointment.hidden = japanese;
-    button.textContent = japanese ? 'English' : '日本語';
-    button.setAttribute('aria-label', japanese ? 'Change language to English' : 'Change language to Japanese');
+    button.setAttribute('aria-label', japanese ? '言語を選択' : 'Choose language');
     button.title = button.getAttribute('aria-label');
+    options.forEach(option => option.setAttribute('aria-current', String(option.dataset.languageOption === language)));
     document.title = japanese ? translations['DevFoundy — Kenta’s story, projects & custom websites'] : 'DevFoundy — Kenta’s story, projects & custom websites';
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = japanese
+      ? 'DevFoundyのKentaによる個人プロジェクト、ウェブサイト制作、学習資料をご紹介します。'
+      : 'DevFoundy by Kenta — independent projects, custom websites, and a story that includes co-founding a tutoring website. Discover the person behind the work.';
+    window.dispatchEvent(new Event('devfoundy-language-change'));
     try { localStorage.setItem('devfoundy-language', language); } catch {}
   }
 
+  function closeMenu() {
+    menu.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  }
+
   button.addEventListener('click', () => {
-    const language = root.lang === 'ja' ? 'en' : 'ja';
+    menu.hidden = !menu.hidden;
+    button.setAttribute('aria-expanded', String(!menu.hidden));
+  });
+  options.forEach(option => option.addEventListener('click', () => {
+    const language = option.dataset.languageOption;
     setLanguage(language);
+    closeMenu();
+    button.focus();
     if (language === 'ja') fallBlossoms();
     else clearBlossoms();
+  }));
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.language-picker')) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) {
+      closeMenu();
+      button.focus();
+    }
   });
   setLanguage(root.dataset.language === 'ja' ? 'ja' : 'en');
 })();
+
