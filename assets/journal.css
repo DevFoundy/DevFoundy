@@ -12,3 +12,38 @@
 .notebook-heading{font-size:30px;line-height:1.25;letter-spacing:-1px;margin:0 0 12px}
 .notebook-intro{font-size:14px;color:var(--muted);margin:0 0 32px;max-width:550px}
 @media(max-width:680px){.journal-tools{grid-template-columns:1fr;gap:14px}.journal-reset{justify-self:start}.notebook-archive{margin-top:55px;padding-top:30px}.notebook-heading{font-size:27px}}
+
+/* Give the filters their own padded panel, with no empty reset column. */
+body .journal-tools {
+  padding: clamp(1rem, 2vw, 1.75rem);
+  gap: 1rem;
+  margin: 0 0 1rem;
+  border: 1px solid var(--studio-rule);
+  background: var(--tone-fffefa);
+}
+body .journal-tools:has(.journal-reset[hidden]) {
+  grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr);
+}
+.journal-field { font-size: .9rem; }
+.journal-field input, .journal-field select {
+  min-height: 48px;
+  border: 1px solid var(--studio-rule);
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 400;
+  background: var(--studio-paper);
+  color: var(--studio-ink);
+}
+.journal-field select {
+  appearance: none;
+  padding-right: 2.7rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%236e6876' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+.journal-reset { border-radius: 3px; font-size: .875rem; }
+.journal-results { font-size: .875rem; }
+@media(max-width:680px) {
+  body .journal-tools, body .journal-tools:has(.journal-reset[hidden]) { grid-template-columns: minmax(0,1fr); }
+}

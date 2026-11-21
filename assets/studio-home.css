@@ -157,3 +157,30 @@
   .print-cover img, .ink-button { transition: none; }
   .project-cover-link:is(:hover,:focus-visible) .print-cover img, .ink-button:hover { transform: none; }
 }
+
+/* Contact cards visibly respond to pointer and keyboard interaction. */
+.studio-home .contact-link {
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+.studio-home .contact-link:is(:hover, :focus-visible) {
+  background: #ffd2b3;
+  border-color: #ffd2b3;
+  color: #25232b;
+}
+.studio-home .contact-link[href*="discord.com"]:is(:hover, :focus-visible) {
+  background: #c1baff;
+  border-color: #c1baff;
+}
+.studio-home .contact-link:is(:hover, :focus-visible) :is(small, strong, .arrow) {
+  color: #25232b;
+}
+.studio-home .contact-link[href*="discord.com"]:is(:hover, :focus-visible) svg path {
+  fill: #39368c;
+}
+.studio-home .contact-link:focus-visible {
+  outline: 3px solid #fff4df;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-home .contact-link { transition: none; }
+}
