@@ -5,7 +5,7 @@
   try { const saved = localStorage.getItem('devfoundy-theme'); if (saved === 'light' || saved === 'dark') chosen = saved; } catch {}
   const apply = theme => {
     root.dataset.theme = theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111c18' : '#f6f4ee');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#1a191e' : '#faf8f1');
     document.querySelectorAll('.theme-toggle').forEach(button => {
       const japanese = root.lang === 'ja';
       const label = theme === 'dark'

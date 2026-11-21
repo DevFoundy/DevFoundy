@@ -1,10 +1,13 @@
 (() => {
   const root = document.documentElement;
-  const pagePath = location.pathname.split('/DevFoundy/').pop().replace(/^\//, '') || 'index.html';
+  // Resolve dictionaries relative to this script so clones work under any base URL.
+  const siteRoot = new URL('../', document.currentScript.src);
+  const pagePath = location.pathname.slice(siteRoot.pathname.length) || 'index.html';
   const translations = {
     ...(window.devfoundyJournalTranslations || {}),
     ...(window.devfoundyPageTranslations?.[pagePath] || {})
   };
+  Object.assign(translations, {"Academy": "アカデミー", "Get in touch": "お問い合わせ"});
   delete translations['.'];
   const originalTitle = document.title;
   const header = document.querySelector('header .nav') || document.querySelector('header');

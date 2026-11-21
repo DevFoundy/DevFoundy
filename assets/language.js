@@ -219,6 +219,46 @@
   ,"Have an idea you’d like to talk through? Choose a time on my calendar and let’s discuss your project over Google Meet.": "相談したいアイデアがありますか？カレンダーからご都合のよい時間を選び、Google Meetでプロジェクトについてお話ししましょう。"
   ,"Google Meet · Choose a time that works for you": "Google Meet · ご都合のよい時間をお選びください"
 };
+  Object.assign(translations, {
+    "Independent developer portfolio": "個人開発者のポートフォリオ",
+    "Built out of": "好奇心から",
+    "curiosity.": "生まれたもの。",
+    "I’m Kenta Takizawa, a developer in Bangkok. I make music tools, build websites, and write about the things I learn along the way.": "バンコクで開発をしている滝沢ケンタです。音楽ツールやウェブサイトを作り、その過程で学んだことを書いています。",
+    "Explore projects": "作品を見る",
+    "Get in touch": "お問い合わせ",
+    "About": "自己紹介",
+    "Academy": "アカデミー",
+    "Studio desktop": "スタジオのデスクトップ",
+    "Software": "ソフトウェア",
+    "Web design": "ウェブデザイン",
+    "Music tools": "音楽ツール",
+    "Education": "教育",
+    "Field notes": "制作ノート",
+    "Selected work": "主な作品",
+    "All projects": "すべての作品",
+    "A songwriting desk for chords, drums, and arrangements.": "コード、ドラム、アレンジを組み立てる作曲ワークスペース。",
+    "Music journal": "音楽日記",
+    "A place to rate records and keep listening notes.": "聴いた作品を評価して、感想を書き留める場所。",
+    "A training log for the next set and the next session.": "次のセットやトレーニングに役立つワークアウト記録。",
+    "Browse project screenshots": "プロジェクトの画面を見る",
+    "Founder’s journal": "開発者日誌",
+    "20 Nov 2026": "2026年11月20日",
+    "Why I Build Things Nobody Asked For": "誰にも頼まれていないものを作る理由",
+    "Read the entry": "記事を読む",
+    "Studio index": "スタジオ案内",
+    "Current projects": "制作中のプロジェクト",
+    "Website services": "ウェブサイト制作",
+    "Courses & resources": "講座・学習資料",
+    "Frequently asked questions": "よくある質問",
+    "Contact": "お問い合わせ",
+    "Read the journal": "日誌を読む",
+    "Fitness": "フィットネス",
+    "Projects": "プロジェクト",
+    "Journal": "ジャーナル",
+    "About me": "自己紹介",
+    "Experience": "経験"
+});
+  translations['Read my story'] = '私のストーリーを読む';
   const root = document.documentElement;
   const button = document.querySelector('.language-toggle');
   const menu = document.getElementById('language-menu');
@@ -270,6 +310,7 @@
   while (walker.nextNode()) originals.set(walker.currentNode, walker.currentNode.nodeValue);
 
   const attributeCopy = [
+    ['.desktop-print img', 'alt', '青い画面に笑顔を映したクリーム色のデスクトップパソコンと、キーボード、マウスのイラスト。'],
     ['a.brand', 'aria-label', 'DevFoundyのホーム'],
     ['#navigation', 'aria-label', 'メインナビゲーション'],
     ['.strip', 'aria-label', '主な活動分野'],

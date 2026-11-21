@@ -1,147 +1,147 @@
-/* Shared palette: light retains the original cream and sage identity. */
+/* Legacy page tokens map to the studio print palette. */
 :root {
-  --tone-f6f4ee: #f6f4ee;
-  --tone-202d27: #202d27;
-  --tone-657068: #657068;
-  --tone-dcded4: #dcded4;
-  --tone-294a38: #294a38;
-  --tone-d9edac: #d9edac;
-  --tone-fffefa: #fffefa;
-  --tone-719a43: #719a43;
-  --tone-f6f4eef2: #f6f4eef2;
-  --tone-779855: #779855;
-  --tone-3d604b: #3d604b;
-  --tone-b8c1b4: #b8c1b4;
-  --tone-e9ecdf: #e9ecdf;
-  --tone-d7ddcd: #d7ddcd;
-  --tone-72944d: #72944d;
-  --tone-e9eddf: #e9eddf;
-  --tone-668052: #668052;
-  --tone-91a577: #91a577;
-  --tone-cdd5c5: #cdd5c5;
-  --tone-e2e9d8: #e2e9d8;
-  --tone-e7e9e1: #e7e9e1;
-  --tone-7b8771: #7b8771;
-  --tone-e7eddc: #e7eddc;
-  --tone-fffefaec: #fffefaec;
-  --tone-687460: #687460;
-  --tone-e6e2da: #e6e2da;
-  --tone-768365: #768365;
-  --tone-adb99f: #adb99f;
-  --tone-bfc9b6: #bfc9b6;
-  --tone-7d8b71: #7d8b71;
-  --tone-53624f: #53624f;
-  --tone-78915f: #78915f;
-  --tone-ccd3c3: #ccd3c3;
-  --tone-d9dfce: #d9dfce;
-  --tone-cbd4bd: #cbd4bd;
-  --tone-dbe1ce: #dbe1ce;
-  --tone-c3cdb5: #c3cdb5;
-  --tone-70875a: #70875a;
-  --tone-708773: #708773;
-  --tone-718653: #718653;
-  --tone-bac5b1: #bac5b1;
-  --tone-cbd3c1: #cbd3c1;
-  --tone-cfd7c3: #cfd7c3;
-  --tone-748561: #748561;
-  --tone-7c8b6d: #7c8b6d;
-  --tone-a3b493: #a3b493;
-  --tone-71815f: #71815f;
-  --tone-d1dac7: #d1dac7;
-  --tone-9cab8a: #9cab8a;
-  --tone-e4edda: #e4edda;
-  --tone-d9e6c8: #d9e6c8;
-  --tone-a9bb98: #a9bb98;
-  --tone-edf1e5: #edf1e5;
-  --tone-d3dacb: #d3dacb;
-  --tone-64705f: #64705f;
-  --tone-75836a: #75836a;
-  --tone-b9c6ac: #b9c6ac;
-  --tone-759450: #759450;
-  --tone-71835e: #71835e;
-  --tone-718069: #718069;
-  --tone-46554a: #46554a;
-  --tone-24382b: #24382b;
-  --tone-d3dcc8: #d3dcc8;
-  --tone-8ba370: #8ba370;
-  --tone-e6ebdc: #e6ebdc;
-  --tone-a8b59a: #a8b59a;
-  --tone-9fac94: #9fac94;
-  --tone-68785d: #68785d;
-  --tone-b6c0ac: #b6c0ac;
+  --tone-f6f4ee: #faf8f1;
+  --tone-202d27: #212023;
+  --tone-657068: #5c585b;
+  --tone-dcded4: #cbc7bc;
+  --tone-294a38: #3339a9;
+  --tone-d9edac: #e6e5f8;
+  --tone-fffefa: #fffdf6;
+  --tone-719a43: #6a65a6;
+  --tone-f6f4eef2: #faf8f1f5;
+  --tone-779855: #ec6741;
+  --tone-3d604b: #293093;
+  --tone-b8c1b4: #6a65a6;
+  --tone-e9ecdf: #eeece3;
+  --tone-d7ddcd: #cbc7bc;
+  --tone-72944d: #5c585b;
+  --tone-e9eddf: #eeece3;
+  --tone-668052: #5c585b;
+  --tone-91a577: #3339a9;
+  --tone-cdd5c5: #cbc7bc;
+  --tone-e2e9d8: #eeece3;
+  --tone-e7e9e1: #eeece3;
+  --tone-7b8771: #5c585b;
+  --tone-e7eddc: #ececdb;
+  --tone-fffefaec: #fffdf6f2;
+  --tone-687460: #5c585b;
+  --tone-e6e2da: #eeece3;
+  --tone-768365: #5c585b;
+  --tone-adb99f: #6a65a6;
+  --tone-bfc9b6: #cbc7bc;
+  --tone-7d8b71: #5c585b;
+  --tone-53624f: #5c585b;
+  --tone-78915f: #5c585b;
+  --tone-ccd3c3: #cbc7bc;
+  --tone-d9dfce: #cbc7bc;
+  --tone-cbd4bd: #cbc7bc;
+  --tone-dbe1ce: #cbc7bc;
+  --tone-c3cdb5: #cbc7bc;
+  --tone-70875a: #5c585b;
+  --tone-708773: #5c585b;
+  --tone-718653: #5c585b;
+  --tone-bac5b1: #6a65a6;
+  --tone-cbd3c1: #cbc7bc;
+  --tone-cfd7c3: #cbc7bc;
+  --tone-748561: #5c585b;
+  --tone-7c8b6d: #5c585b;
+  --tone-a3b493: #6a65a6;
+  --tone-71815f: #5c585b;
+  --tone-d1dac7: #cbc7bc;
+  --tone-9cab8a: #cbc7bc;
+  --tone-e4edda: #e6e5f8;
+  --tone-d9e6c8: #cbc7bc;
+  --tone-a9bb98: #cbc7bc;
+  --tone-edf1e5: #eeece3;
+  --tone-d3dacb: #cbc7bc;
+  --tone-64705f: #5c585b;
+  --tone-75836a: #5c585b;
+  --tone-b9c6ac: #6a65a6;
+  --tone-759450: #5c585b;
+  --tone-71835e: #5c585b;
+  --tone-718069: #5c585b;
+  --tone-46554a: #212023;
+  --tone-24382b: #212023;
+  --tone-d3dcc8: #cbc7bc;
+  --tone-8ba370: #ec6741;
+  --tone-e6ebdc: #eeece3;
+  --tone-a8b59a: #6a65a6;
+  --tone-9fac94: #6a65a6;
+  --tone-68785d: #5c585b;
+  --tone-b6c0ac: #6a65a6;
   color-scheme: light;
   --theme-shadow: 0 10px 32px -24px #294a3850;
 }
 :root[data-theme="dark"] {
-  --tone-f6f4ee: #111c18;
-  --tone-202d27: #ecf0e8;
-  --tone-657068: #afbbb0;
-  --tone-dcded4: #34453a;
-  --tone-294a38: #b8d68e;
-  --tone-d9edac: #d9edac;
-  --tone-fffefa: #1a2921;
-  --tone-719a43: #b8d68e;
-  --tone-f6f4eef2: #111c18f2;
-  --tone-779855: #b8d68e;
-  --tone-3d604b: #cee6a9;
-  --tone-b8c1b4: #52694f;
-  --tone-e9ecdf: #25382a;
-  --tone-d7ddcd: #3b4c3f;
-  --tone-72944d: #b8d68e;
-  --tone-e9eddf: #203226;
-  --tone-668052: #b8d68e;
-  --tone-91a577: #afca8f;
-  --tone-cdd5c5: #3d5041;
-  --tone-e2e9d8: #283c2c;
-  --tone-e7e9e1: #34453a;
-  --tone-7b8771: #afbea0;
-  --tone-e7eddc: #2b4030;
-  --tone-fffefaec: #1a2921ec;
-  --tone-687460: #afbea0;
-  --tone-e6e2da: #2c322a;
-  --tone-768365: #b4c69e;
-  --tone-adb99f: #607b51;
-  --tone-bfc9b6: #44573f;
-  --tone-7d8b71: #afbea0;
-  --tone-53624f: #bdc9b5;
-  --tone-78915f: #a8c387;
-  --tone-ccd3c3: #3d5041;
-  --tone-d9dfce: #344b39;
-  --tone-cbd4bd: #3d5041;
-  --tone-dbe1ce: #34453a;
-  --tone-c3cdb5: #445b3c;
-  --tone-70875a: #b8d68e;
-  --tone-708773: #52694f;
-  --tone-718653: #c4dda6;
-  --tone-bac5b1: #445b3c;
-  --tone-cbd3c1: #344b39;
-  --tone-cfd7c3: #3d5041;
-  --tone-748561: #afbea0;
-  --tone-7c8b6d: #afbea0;
-  --tone-a3b493: #607b51;
-  --tone-71815f: #b2c49d;
-  --tone-d1dac7: #3d5041;
-  --tone-9cab8a: #4c6441;
-  --tone-e4edda: #2c402a;
-  --tone-d9e6c8: #354e31;
-  --tone-a9bb98: #4c6441;
-  --tone-edf1e5: #223728;
-  --tone-d3dacb: #3d5041;
-  --tone-64705f: #b3c1a8;
-  --tone-75836a: #afbea0;
-  --tone-b9c6ac: #445b3c;
-  --tone-759450: #b8d68e;
-  --tone-71835e: #b2c49d;
-  --tone-718069: #afbbb0;
-  --tone-46554a: #c1cdbf;
-  --tone-24382b: #e5efdd;
-  --tone-d3dcc8: #3d5041;
-  --tone-8ba370: #9ab77c;
-  --tone-e6ebdc: #2b4030;
-  --tone-a8b59a: #52694f;
-  --tone-9fac94: #52694f;
-  --tone-68785d: #b2c49d;
-  --tone-b6c0ac: #445b3c;
+  --tone-f6f4ee: #1a191e;
+  --tone-202d27: #f7f2e4;
+  --tone-657068: #c2bdc4;
+  --tone-dcded4: #524e57;
+  --tone-294a38: #c0bbff;
+  --tone-d9edac: #353347;
+  --tone-fffefa: #25232a;
+  --tone-719a43: #a8a2d0;
+  --tone-f6f4eef2: #1a191ef5;
+  --tone-779855: #ff9975;
+  --tone-3d604b: #cfcaff;
+  --tone-b8c1b4: #a8a2d0;
+  --tone-e9ecdf: #302e37;
+  --tone-d7ddcd: #524e57;
+  --tone-72944d: #c2bdc4;
+  --tone-e9eddf: #302e37;
+  --tone-668052: #c2bdc4;
+  --tone-91a577: #c0bbff;
+  --tone-cdd5c5: #524e57;
+  --tone-e2e9d8: #302e37;
+  --tone-e7e9e1: #302e37;
+  --tone-7b8771: #c2bdc4;
+  --tone-e7eddc: #35342d;
+  --tone-fffefaec: #25232af2;
+  --tone-687460: #c2bdc4;
+  --tone-e6e2da: #302e37;
+  --tone-768365: #c2bdc4;
+  --tone-adb99f: #a8a2d0;
+  --tone-bfc9b6: #524e57;
+  --tone-7d8b71: #c2bdc4;
+  --tone-53624f: #c2bdc4;
+  --tone-78915f: #c2bdc4;
+  --tone-ccd3c3: #524e57;
+  --tone-d9dfce: #524e57;
+  --tone-cbd4bd: #524e57;
+  --tone-dbe1ce: #524e57;
+  --tone-c3cdb5: #524e57;
+  --tone-70875a: #c2bdc4;
+  --tone-708773: #c2bdc4;
+  --tone-718653: #c2bdc4;
+  --tone-bac5b1: #a8a2d0;
+  --tone-cbd3c1: #524e57;
+  --tone-cfd7c3: #524e57;
+  --tone-748561: #c2bdc4;
+  --tone-7c8b6d: #c2bdc4;
+  --tone-a3b493: #a8a2d0;
+  --tone-71815f: #c2bdc4;
+  --tone-d1dac7: #524e57;
+  --tone-9cab8a: #524e57;
+  --tone-e4edda: #353347;
+  --tone-d9e6c8: #524e57;
+  --tone-a9bb98: #524e57;
+  --tone-edf1e5: #302e37;
+  --tone-d3dacb: #524e57;
+  --tone-64705f: #c2bdc4;
+  --tone-75836a: #c2bdc4;
+  --tone-b9c6ac: #a8a2d0;
+  --tone-759450: #c2bdc4;
+  --tone-71835e: #c2bdc4;
+  --tone-718069: #c2bdc4;
+  --tone-46554a: #f7f2e4;
+  --tone-24382b: #f7f2e4;
+  --tone-d3dcc8: #524e57;
+  --tone-8ba370: #ff9975;
+  --tone-e6ebdc: #302e37;
+  --tone-a8b59a: #a8a2d0;
+  --tone-9fac94: #a8a2d0;
+  --tone-68785d: #c2bdc4;
+  --tone-b6c0ac: #a8a2d0;
   color-scheme: dark;
   --theme-shadow: 0 16px 34px -22px #0009;
 }
@@ -215,3 +215,131 @@ a[href="#main"] { background:var(--tone-fffefa)!important; color:var(--tone-202d
   .theme-toggle { flex-basis:44px; }
 }
 @media(prefers-reduced-motion:reduce) { .theme-toggle { transition:none; } }
+
+/* Studio typography, shared navigation and printed surfaces. */
+:root {
+  --studio-paper: var(--tone-f6f4ee);
+  --studio-ink: var(--tone-202d27);
+  --studio-blue: var(--tone-294a38);
+  --studio-rule: var(--tone-dcded4);
+  --studio-orange: #fb633e;
+  --studio-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --studio-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --studio-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --studio-gutter: clamp(1.2rem, 5vw, 5rem);
+  --studio-width: 1392px;
+  --theme-shadow: none;
+}
+:root[data-theme="dark"] { --theme-shadow: none; }
+body { font-family: var(--studio-display); }
+::selection { background: #ffc5a8; color: #251d27; }
+body > header { background: var(--studio-paper); border-bottom: 1px solid var(--studio-ink); backdrop-filter: none; }
+.wrap, body > header > .nav, body > header > .wrap {
+  width: 100%; max-width: var(--studio-width); margin-inline: auto; padding-inline: var(--studio-gutter);
+}
+body > header > .nav, body > header > .wrap { min-height: 70px; height: auto; padding-block: 10px; }
+body .brand {
+  display: inline-flex; align-items: center; gap: 0; white-space: nowrap;
+  color: var(--studio-ink); font: 800 1.55rem/1 var(--studio-display); letter-spacing: -.075em;
+}
+.brand::before {
+  content: ""; flex: 0 0 1.7rem; width: 1.7rem; height: 1.7rem; margin-right: .52rem;
+  background: center / contain no-repeat url("prints/mark.svg");
+}
+body .brand span { color: var(--studio-orange); }
+body > header #navigation { gap: clamp(1rem,2vw,2rem); }
+body > header nav a, body > header a.back, body > header a.nav-link { font-size: .91rem; }
+body > header #navigation a:not(.nav-cta) { color: var(--studio-ink); font-weight: 600; }
+body > header #navigation a[aria-current="page"] { text-decoration: underline; text-underline-offset: .4em; }
+body > header .theme-toggle, body > header .language-toggle {
+  height: 40px; width: 40px; flex-basis: 40px; border-radius: 50%; padding: 9px;
+  box-shadow: none; background: transparent; color: var(--studio-ink); border: 1px solid var(--studio-rule);
+}
+body > header .language-picker { order: 2; }
+body > header .theme-toggle { order: 3; }
+body > header .menu { order: 4; border-radius: 3px; font-size: .875rem; }
+body > header .back { order: 1; }
+body > header .language-menu { z-index: 20; background: var(--tone-fffefa); color: var(--studio-ink); border-radius: 3px; }
+body .nav-cta, body .btn, body .story-links a, [data-theme="dark"] body .nav-cta, [data-theme="dark"] body .btn {
+  border: 1px solid var(--studio-ink); border-radius: 3px; background: var(--studio-ink); color: var(--studio-paper);
+  box-shadow: none; font-size: .91rem;
+}
+body .btn.light, body .btn.secondary { background: transparent; color: var(--studio-ink); }
+body .btn:hover, body .nav-cta:hover, [data-theme="dark"] body .btn:hover, [data-theme="dark"] body .nav-cta:hover {
+  background: var(--studio-blue); color: var(--studio-paper); border-color: var(--studio-blue);
+}
+body .eyebrow, body .status, body .meta, body .blog-meta, body .project-count {
+  font-family: var(--studio-mono); font-size: .75rem; letter-spacing: .075em;
+}
+body :is(h1,h2,h3,h4) { font-family: var(--studio-display); }
+body .project-number { display: none; }
+body :is(.current-project,.offer-card,.about-interest,.experience-item,.experience-intro,.concept-card,.focus-panel,.interest,.appointment-panel,.contact-panel,.closing) {
+  border-radius: 3px; box-shadow: none; background-image: none;
+}
+body :is(.text-link,.back):hover { text-decoration: underline; text-underline-offset: .24em; }
+body :focus-visible { outline: 3px solid var(--studio-blue); outline-offset: 4px; }
+body footer { border-top-color: var(--studio-ink); }
+body .projects-hero, body .journal-intro {
+  display: grid; grid-template-columns: minmax(0,1.55fr) minmax(0,1fr); column-gap: 3rem;
+  position: relative; align-content: center; padding: clamp(2rem,5vw,5rem) 0;
+  border-bottom: 1px solid var(--studio-ink);
+}
+body :is(.projects-hero,.journal-intro) > * { grid-column: 1; }
+body :is(.projects-hero,.journal-intro) > .text-link { justify-self: start; }
+body :is(.projects-hero,.journal-intro)::after {
+  content: ""; position: absolute; right: 0; top: 50%; width: 35%;
+  aspect-ratio: 450 / 230; transform: translateY(-50%) rotate(2deg);
+  background: center / cover no-repeat url("prints/folders.svg"); border: 1px solid var(--studio-ink);
+  box-shadow: 5px 5px 0 var(--studio-ink);
+}
+body .journal-intro::after { background-image: url("prints/notebook.svg"); transform: translateY(-50%) rotate(-2deg); }
+body :is(.projects-hero,.journal-intro) h1 { font-size: clamp(3.2rem,6.3vw,6.4rem); line-height: .99; font-weight: 700; letter-spacing: -.07em; margin: .26em 0; }
+body :is(.projects-hero,.journal-intro) h1 em { font: italic 500 1.08em/.9 var(--studio-serif); color: var(--studio-blue); letter-spacing: -.08em; }
+body .project-count { background: transparent; padding: 0; border: 0; color: var(--tone-657068); }
+body .projects-grid { align-items: stretch; gap: clamp(1rem,2.5vw,2.2rem); }
+body .project-card, body .project-card:nth-child(4n+1) {
+  border: 1px solid var(--studio-rule); border-top: 3px solid var(--studio-ink);
+  background: var(--tone-fffefa); border-radius: 2px; box-shadow: none; padding: clamp(1.2rem,2vw,2rem);
+}
+body .project-card .catalog-cover { width: 100%; height: auto; aspect-ratio: 2.45; object-fit: cover; display: block; margin-bottom: 1.5rem; border: 1px solid var(--studio-rule); }
+body .project-card .catalog-cover.screen { object-position: center 33%; }
+body .project-card h2 { font-size: clamp(1.8rem,3.1vw,3.2rem); line-height: 1.04; letter-spacing: -.06em; margin: .45em 0 .35em; }
+body .project-intro { font-size: 1.08rem; }
+body .project-detail p:not(.stack), body .blog-post p { font-size: 1rem; line-height: 1.6; }
+body .project-card .stack { font-family: var(--studio-mono); font-size: .8rem; }
+body .journal-tools { border-radius: 2px; background: var(--tone-e9ecdf); border-color: var(--studio-rule); }
+body .journal-list .blog-grid { gap: 2.4rem 2rem; }
+body .journal-list .blog-post { border-top: 2px solid var(--studio-ink); background: transparent; border-radius: 0; box-shadow: none; }
+body .blog-meta { color: var(--tone-657068); }
+body .blog-meta span:first-child { color: var(--studio-blue); }
+body .blog-post h2 { font: 600 clamp(1.6rem,2.35vw,2.55rem)/1.1 var(--studio-serif); letter-spacing: -.045em; }
+body .blog-post h2 a:hover, body .article-body a:hover { text-decoration: underline; text-underline-offset: .12em; }
+body .article-head { border-top: 5px solid var(--studio-blue); border-bottom: 1px solid var(--studio-ink); padding-top: 1.75rem; }
+body .article-head h1 { font: 600 clamp(2.8rem,6.8vw,5.6rem)/1 var(--studio-serif); letter-spacing: -.055em; }
+body .article-head .dek { font-size: clamp(1.12rem,2vw,1.38rem); line-height: 1.52; }
+body .article-body { margin-inline: auto; }
+body .article-body p, body .article-body li { font-family: var(--studio-serif); font-size: 1.17rem; line-height: 1.72; }
+body .article-body h2 { font-size: 1.85rem; letter-spacing: -.045em; }
+body .article-body blockquote { border-left: 4px solid var(--studio-orange); font: italic 1.5rem/1.48 var(--studio-serif); color: var(--studio-blue); }
+body .article-head .meta { row-gap: .35rem; }
+body :is(.project-card,.offer-card,.experience-item,.experience-intro,.current-project,.concept-card).tilt-card { transform: none; }
+@media (max-width: 1000px) {
+  body > header .nav > .theme-toggle { margin-left: 0; }
+  body > header .nav > .language-picker { margin-left: auto; }
+  body > header .nav > #navigation { background: var(--studio-paper); border-bottom: 1px solid var(--studio-ink); gap: .6rem; }
+  body > header .nav > #navigation a { padding-block: .5rem; }
+}
+@media (max-width: 680px) {
+  body > header > .nav, body > header > .wrap { min-height: 62px; flex-wrap: wrap; column-gap: .5rem; }
+  body > header .brand { font-size: 1.25rem; }
+  body > header .back, body > header a.nav-link { font-size: .79rem; }
+  body > header .theme-toggle, body > header .language-toggle { width: 36px; height: 36px; flex-basis: 36px; padding: 7px; }
+  body :is(.projects-hero,.journal-intro) { display: block; }
+  body :is(.projects-hero,.journal-intro)::after { display: none; }
+  body .project-card .catalog-cover { aspect-ratio: 2.1; }
+  body .journal-list .blog-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  body > header, body > footer, .theme-toggle, .language-picker { display: none; }
+  body { background: white; color: black; }
+}
