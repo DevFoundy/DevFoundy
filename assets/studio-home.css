@@ -62,6 +62,19 @@
 }
 .band-inner i { color: #ffb482; font: 400 1.13rem/1 var(--studio-display); }
 .selected-work { padding-block: var(--section-gap); }
+/* Studio reel: the promo film, framed like the hero print. */
+.studio-reel { padding-top: var(--section-gap); }
+.studio-reel .work-head .studio-label { color: var(--tone-657068); }
+.reel-frame { margin: 0; }
+.reel-frame video {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+  background: #1a191e; border: 1px solid #302c32; border-radius: 4px;
+}
+.reel-frame figcaption {
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: .85rem;
+  font: 600 var(--label)/1.4 var(--studio-mono); text-transform: uppercase; letter-spacing: .08em;
+  color: var(--tone-657068);
+}
 .work-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: clamp(1.15rem,2vw,2rem); }
 .studio-home :is(.work-head, .index-section) > h2 {
   font: 700 clamp(2.5rem,5vw,5.15rem)/.99 var(--studio-display);
