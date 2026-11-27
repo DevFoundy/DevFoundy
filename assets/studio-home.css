@@ -131,6 +131,19 @@
 .chapter-plus::before, .chapter-plus::after { content: ""; position: absolute; top: 50%; width: 100%; height: 2px; background: currentColor; }
 .chapter-plus::after { transform: rotate(90deg); }
 .studio-chapter[open] > summary .chapter-plus::after { transform: none; }
+@media (prefers-reduced-motion: no-preference) {
+  @supports selector(details::details-content) and (transition-behavior: allow-discrete) {
+    .studio-chapter::details-content {
+      display: grid;
+      grid-template-rows: minmax(0, 0fr);
+      overflow: clip;
+      transition: grid-template-rows 300ms ease, content-visibility 300ms allow-discrete;
+    }
+    .studio-chapter[open]::details-content {
+      grid-template-rows: minmax(0, 1fr);
+    }
+  }
+}
 .chapter-content > .section { padding: 1.8rem 0 2.7rem; border: 0; }
 .chapter-content .section-head h2 { font: 600 clamp(2rem,3.3vw,3.5rem)/1.06 var(--studio-serif); letter-spacing: -.045em; }
 .chapter-content :is(.section-head p,.about-interest p,.current-project p,.offer-card p,.experience-item p,.faq p) { font-size: 1rem; line-height: 1.62; }
